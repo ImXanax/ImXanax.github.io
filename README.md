@@ -1,5 +1,5 @@
 # Description
-A hub to have access to all my socials (for practice purposes)
+A hub to have access to all my socials (for practice purposes random things might pop on it)
 Link -> [-l||l-](https://imxanax.github.io/)
 
 
