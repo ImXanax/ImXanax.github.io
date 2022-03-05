@@ -30,13 +30,20 @@ function getRandomNum(){
 }
 
 function getResults(){
-   if(computerChoice === userChoice) result = 'Draw'
+   if(computerChoice === userChoice) result = 'draw'
    if(computerChoice === 'rock' && userChoice === 'paper') result = 'won'
    if(computerChoice === 'rock' && userChoice === 'scissors') result = 'lost'
    if(computerChoice === 'paper' && userChoice === 'rock') result = 'lost'
    if(computerChoice === 'paper' && userChoice === 'scissors') result = 'won'
    if(computerChoice === 'scissors' && userChoice === 'rock') result = 'won'
    if(computerChoice === 'scissors' && userChoice === 'paper') result = 'lost'
-
+    
+   if(result === 'draw'){
+       document.body.style.backgroundColor = '#70b4db'
+   }else if(result === 'won'){
+       document.body.style.backgroundColor = '#26e083'
+   }else{
+       document.body.style.backgroundColor = '#e05858'       
+   }
    resultDisplay.innerHTML = result
 }

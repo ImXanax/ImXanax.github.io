@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,15 +8,21 @@
     <link rel="stylesheet" href="/Games/style/rpc.css">
     <title>Rock Paper Scissors</title>
 </head>
+
 <body>
-    <h2>Computer: <span id="computer-choice"></span></h2>
-    <h2>You: <span id="user-choice"></span></h2>
-    <h2>Result: <span id="result"></span></h2>
-
-    <button id="rock">ROCK</button>
-    <button id="paper">PAPER</button>
-    <button id="scissors">SCISSORS</button>
-
+    <div class="main">
+        <section class="text-section">
+            <h2>COMPUTER: <span id="computer-choice"></span></h2>
+            <h2>YOU: <span id="user-choice"></span></h2>
+            <h2>RESULTS: <span id="result"></span></h2>
+        </section>
+        <section class="btn-section">
+            <button id="rock">ROCK</button>
+            <button id="paper">PAPER</button>
+            <button id="scissors">SCISSORS</button>
+        </section>
+    </div>
     <script src="/Games/app/rpc.js" charset="utf-8"></script>
 </body>
+
 </html>
