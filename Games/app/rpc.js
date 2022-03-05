@@ -1,10 +1,12 @@
 const pcDisplay = document.getElementById('computer-choice');
 const userDisplay = document.getElementById('user-choice')
 const resultDisplay = document.getElementById('result')
+const scoreDisplay = document.getElementById('score');
 const btn = document.querySelectorAll('button')
 let computerChoice
 let userChoice
 let result
+let score = 0;
 
 btn.forEach(buttonClicked => buttonClicked.addEventListener('click',(e)=>{
     userChoice = e.target.id
@@ -42,8 +44,10 @@ function getResults(){
        document.body.style.backgroundColor = '#70b4db'
    }else if(result === 'won'){
        document.body.style.backgroundColor = '#26e083'
+       scoreDisplay.textContent = `${score +=1}`
    }else{
        document.body.style.backgroundColor = '#e05858'       
    }
    resultDisplay.innerHTML = result
+
 }

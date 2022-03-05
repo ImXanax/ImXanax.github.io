@@ -3,14 +3,17 @@
 body{
     background-color: violet;
     color: white;
+    font-family: 'Bebas Neue', cursive;
 }
 .main h2{
     margin: 0;
     font-size: 30px;
+    color:black;
 }
 .main{
-    font-family: 'Bebas Neue', cursive;
+    
     display: flex;
+    margin-top: 50px;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -26,9 +29,6 @@ button{
     font-size: 20px;
     margin: 1px;
 }
-.text-section{
-    color: black;
-}
 #computer-choice{
     color: rgb(149, 0, 248);
 }
@@ -37,4 +37,7 @@ button{
 }
 #result{
     color: rgb(249, 253, 24);
+}
+#score{
+    color: cornsilk;
 }
