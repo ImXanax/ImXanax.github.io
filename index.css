@@ -20,8 +20,7 @@ ul{
     margin: 0;
     padding: 0;
     overflow: hidden;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 10px;
     background-color:hsl(256, 87%, 28%);
 }
  li{
