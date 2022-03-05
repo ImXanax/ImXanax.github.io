@@ -15,7 +15,6 @@ btn.forEach(buttonClicked => buttonClicked.addEventListener('click',(e)=>{
 
 function getRandomNum(){
     const random = Math.floor(Math.random()*3)+1
-    console.log(random)
     switch(random){
         case 1:
             computerChoice = 'rock'
@@ -27,21 +26,10 @@ function getRandomNum(){
             computerChoice = 'scissors'
         break;
     }
-    console.log(computerChoice)
     pcDisplay.innerHTML = computerChoice;
 }
 
 function getResults(){
-    /*
-    rock paper -> win
-    rock scissors -> lose
-
-    paper rock -> lose
-    paper scissors -> win
-
-    scissors rock -> win
-    scissors paper -> lose
-    */
    if(computerChoice === userChoice) result = 'Draw'
    if(computerChoice === 'rock' && userChoice === 'paper') result = 'won'
    if(computerChoice === 'rock' && userChoice === 'scissors') result = 'lost'
