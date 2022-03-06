@@ -1,0 +1,15 @@
+body{
+    background-color: rgb(126, 103, 231);
+    max-width: 100%;
+    overflow-x: hidden;
+}
+img{
+    width: 100px;
+    height: 100px;
+    margin: 2px;
+}
+#container{
+    height: 400px;
+    width: 500px;
+    display: flex;
+}

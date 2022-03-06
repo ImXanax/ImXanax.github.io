@@ -1,8 +1,9 @@
-const pcDisplay = document.getElementById('computer-choice');
+const pcDisplay = document.getElementById('computer-choice')
 const userDisplay = document.getElementById('user-choice')
 const resultDisplay = document.getElementById('result')
-const scoreDisplay = document.getElementById('score');
+const scoreDisplay = document.getElementById('score')
 const btn = document.querySelectorAll('button')
+const resultImage = document.querySelector('#choices')
 let computerChoice
 let userChoice
 let result
@@ -13,6 +14,8 @@ btn.forEach(buttonClicked => buttonClicked.addEventListener('click',(e)=>{
     userDisplay.innerHTML = userChoice
     getRandomNum()
     getResults()
+    resultImage.innerHTML = ''
+    rImage()
 }))
 
 function getRandomNum(){
@@ -49,5 +52,13 @@ function getResults(){
        document.body.style.backgroundColor = '#e05858'       
    }
    resultDisplay.innerHTML = result
+}
 
+function rImage(){
+    const userImage = document.createElement('img')
+    const computerImage = document.createElement('img')
+    userImage.setAttribute('src' , `images/${userChoice}.png`)
+    computerImage.setAttribute('src' , `images/${computerChoice}.png`)
+    resultImage.append(userImage)
+    resultImage.append(computerImage)
 }

@@ -18,6 +18,11 @@ body{
     justify-content: space-between;
     align-items: center;
 }
+.text-section{
+    display: inherit;
+    flex-direction: row;
+    gap: 125px;
+}
 button{
     border: none;
     background-color: black;
@@ -30,14 +35,26 @@ button{
     margin: 1px;
 }
 #computer-choice{
-    color: rgb(149, 0, 248);
+    color: rgb(102, 10, 10);
 }
 #user-choice{
-    color: rgb(56, 0, 209);
+    color: rgb(255, 255, 255);
 }
 #result{
     color: rgb(249, 253, 24);
 }
 #score{
     color: cornsilk;
+}
+.image-display{
+    display: flex;   
+    width: 1000px;
+    height: 250px;
+    justify-content: center;
+}
+
+img{
+    width: 250px;
+    height: 250px;
+    margin: 2px;
 }
