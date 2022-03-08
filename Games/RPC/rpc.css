@@ -40,5 +40,8 @@ button{
     flex-direction: row;
 }
 .image-display img{
+    width: 225px;
     margin: 5px;
+    max-width: 100%;
+    height: auto;
 }
