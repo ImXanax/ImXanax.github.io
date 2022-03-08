@@ -7,7 +7,8 @@ const resultImage = document.querySelector('#choices')
 let computerChoice
 let userChoice
 let result
-let score = 0;
+let score = 0
+let lost = false
 
 btn.forEach(buttonClicked => buttonClicked.addEventListener('click',(e)=>{
     userChoice = e.target.id
@@ -42,10 +43,15 @@ function getResults(){
    if(computerChoice === 'paper' && userChoice === 'scissors') result = 'won'
    if(computerChoice === 'scissors' && userChoice === 'rock') result = 'won'
    if(computerChoice === 'scissors' && userChoice === 'paper') result = 'lost'
-    
+   if(result === 'lost'){
+        lost = true;
+        score = 0 ;
+        scoreDisplay.textContent = score
+   }
    if(result === 'draw'){
        document.body.style.backgroundColor = '#70b4db'
    }else if(result === 'won'){
+       lost = false;
        document.body.style.backgroundColor = '#26e083'
        scoreDisplay.textContent = `${score +=1}`
    }else{
