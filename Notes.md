@@ -1,5 +1,6 @@
 # To-do
-- Box hover animation
+x Box hover animation
 - 7 games
 - fix drop down menu colors
-- assign better font for nav
+x assign better font for nav
+- img center issue on resize
