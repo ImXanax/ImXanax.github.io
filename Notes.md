@@ -1,7 +1,15 @@
 # To-do
 x Box hover animation
-- 7 games
-- fix drop down menu colors
 x assign better font for nav
-- img center issue on resize
+## General
 x test webhook
+
+## Main
+- fix drop down menu colors
+
+## RPC
+- img center issue on resize
+
+## PT
+- fix styling & aesthetics 
+- center imgs
