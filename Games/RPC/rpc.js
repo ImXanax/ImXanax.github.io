@@ -12,6 +12,8 @@ let lost = false
 
 btn.forEach(buttonClicked => buttonClicked.addEventListener('click',(e)=>{
     userChoice = e.target.id
+    console.log(`e: ${e.target.id}`) 
+    console.log(`userChoice: ${userChoice}`)
     userDisplay.innerHTML = userChoice
     getRandomNum()
     getResults()
