@@ -9,7 +9,12 @@ x test webhook
 
 ## RPC
 - img center issue on resize
+- responsive
 
 ## PT
 - fix styling & aesthetics 
-- center imgs
+- responsive 
+
+## WM
+- change speed
+- add difficulty options
