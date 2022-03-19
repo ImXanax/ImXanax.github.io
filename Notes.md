@@ -5,15 +5,15 @@ x assign better font for nav
 x test webhook
 
 ## Main
-- fix drop down menu colors
+x fix drop down menu colors
 
 ## RPC
-- img center issue on resize
-- responsive
+x img center issue on resize
+x responsive
 
 ## PT
-- fix styling & aesthetics 
-- responsive 
+x fix styling & aesthetics 
+x responsive 
 
 ## WM
 - change speed
