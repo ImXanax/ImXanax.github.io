@@ -53,6 +53,7 @@ let chosenCard = []
 let chosenCardId = []
 const score = []
 let scoreDisplay = document.querySelector('#score')
+let gameOver = document.querySelector('#gameover')
 
 cardArr.sort(()=> 0.5 - Math.random())
 const grid = document.querySelector('#grid')
@@ -60,7 +61,7 @@ const grid = document.querySelector('#grid')
 function createCard(){
     for(let i = 0 ; i < cardArr.length ; i++){
         const card = document.createElement('img')
-        card.setAttribute('src' , 'images/blank.gif')
+        card.setAttribute('src' , 'images/blank.png')
         card.setAttribute('data-id' , i)
         card.addEventListener('click' , flipCard )
         grid.append(card)
@@ -88,13 +89,14 @@ function matchCheck(){
         
     }else{
         alert(`Not a Match, Try Again!`)
-        cards[firstCardId].setAttribute('src' , 'images/blank.gif')
-        cards[secondCardId].setAttribute('src' , 'images/blank.gif')
+        cards[firstCardId].setAttribute('src' , 'images/blank.png')
+        cards[secondCardId].setAttribute('src' , 'images/blank.png')
     }
     chosenCard = []
     chosenCardId = []
     if(score.length === cardArr.length/2){
         alert(`Congrats, You have found them all`)
+        gameOver.textContent = 'REFRESH TO REPLAY'
     }
 }
 
