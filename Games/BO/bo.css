@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(3, 9, 63);
+    color: whitesmoke;
+    text-align: center;
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.border{
+    position: absolute;
+    width: 560px;
+    height: 300px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border: solid rgb(255, 255, 255) 2px;
+}
+.block{
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    background-color: rgb(219, 129, 10);
+}
+.player{
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    background-color: rgb(62, 190, 162);
+}
+.ball{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: white;
+}
+.score{
+    color: rgb(4, 177, 148);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
