@@ -14,7 +14,7 @@ let ballCurrentCoords = ballCoordinates
 let tId
 let xDir = 2
 let yDir = 2
-let score = 0 
+let score = 0
 
 class Block {
     constructor(x, y) {
@@ -134,18 +134,25 @@ function redirect() {
 //collisions
 function checkCollisions() {
     //blocks
-    for (let i = 0 ; i < blocks.length; i++) {
+    for (let i = 0; i < blocks.length; i++) {
         if (
-            (ballCurrentCoords[0] > blocks[i].bottomLeft[0] && ballCurrentCoords[0] < blocks[i].bottomRight[0])&&
+            (ballCurrentCoords[0] > blocks[i].bottomLeft[0] && ballCurrentCoords[0] < blocks[i].bottomRight[0]) &&
             ((ballCurrentCoords[1] + ballDiameter) > blocks[i].bottomLeft[1] && ballCurrentCoords[1] < blocks[i].topLeft[1])
 
         ) {
             const allBlocks = Array.from(document.querySelectorAll('.block'))
             allBlocks[i].classList.remove('block')
-            blocks.splice(i , 1)
+            blocks.splice(i, 1)
             redirect()
             score++
             scoreDisplay.textContent = score
+
+            //check if player has eliminated all blocks
+            if (blocks.length === 0) {
+                scoreDisplay.textContent = 'YOU WON!'
+                clearInterval(tId)
+                document.removeEventListener('keydown', movePlayer)
+            }
         }
     }
     //walls
@@ -157,10 +164,10 @@ function checkCollisions() {
         redirect()
     }
     //player
-    if(
+    if (
         (ballCurrentCoords[0] > playerCurrentCoords[0] && ballCurrentCoords[0] < playerCurrentCoords[0] + playerWidth) &&
         (ballCurrentCoords[1] > playerCurrentCoords[1] && ballCurrentCoords[1] < playerCurrentCoords[1] + playerHeight)
-    ){
+    ) {
         redirect()
     }
     //gameover
