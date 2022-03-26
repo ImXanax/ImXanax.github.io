@@ -156,6 +156,13 @@ function checkCollisions() {
     ) {
         redirect()
     }
+    //player
+    if(
+        (ballCurrentCoords[0] > playerCurrentCoords[0] && ballCurrentCoords[0] < playerCurrentCoords[0] + playerWidth) &&
+        (ballCurrentCoords[1] > playerCurrentCoords[1] && ballCurrentCoords[1] < playerCurrentCoords[1] + playerHeight)
+    ){
+        redirect()
+    }
     //gameover
     if (ballCurrentCoords[1] <= 0) {
         clearInterval(tId)
