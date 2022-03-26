@@ -1,5 +1,6 @@
 const border = document.querySelector('.border')
 const scoreDisplay = document.querySelector('.score')
+const refreshDisplay = document.querySelector('#refresh')
 const blockWidth = 100
 const blockHeight = 20
 const borderWidth = 560
@@ -147,11 +148,12 @@ function checkCollisions() {
             score++
             scoreDisplay.textContent = score
 
-            //check if player has eliminated all blocks
+            //check if player has won
             if (blocks.length === 0) {
                 scoreDisplay.textContent = 'YOU WON!'
                 clearInterval(tId)
                 document.removeEventListener('keydown', movePlayer)
+                refreshDisplay.textContent = 'REFRESH THE PAGE TO REPLAY'
             }
         }
     }
@@ -176,12 +178,13 @@ function checkCollisions() {
         scoreDisplay.textContent = 'YOU LOST'
         scoreDisplay.style.color = 'red'
         document.removeEventListener('keydown', movePlayer)
+        refreshDisplay.textContent = 'REFRESH THE PAGE TO REPLAY'
     }
 }
 
-tId = setInterval(moveBall, 30);
-
-//listener
-document.addEventListener('keydown', movePlayer)
+function start() {
+    tId = setInterval(moveBall, 20)
+    document.addEventListener('keydown', movePlayer)
+}
 
 instantiateBlocks()

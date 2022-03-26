@@ -1,3 +1,4 @@
+
 body{
     background-color: rgb(3, 9, 63);
     color: whitesmoke;
@@ -36,5 +37,38 @@ body{
 .score{
     color: rgb(4, 177, 148);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+}
+#refresh{
+    position: absolute;
+    top: 67%; 
+    left: 50%;
+    transform: translate(-50%,0);
+    color: rgb(179, 54, 54);
+    font-size: 20px;
+}
+#start-btn{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+#start-btn button{
+    border: none;
+    top: 0;
+    font-size: 26px;
+    font-family: 'Varela Round', sans-serif;
+    font-weight:  bold;
+    padding: 16px 16px;
+    color: white;
+    background-color: rgb(17, 5, 119);
+    border-radius: 10px;
+    outline: none;
+    text-decoration: none;
+    box-shadow: 0 8px 0px #030025;
+    transition: all .2s;
+}
+#start-btn button:active{
+    top: 80%;
+    box-shadow: 0 2px 0px #000000;
+    transition: all .2s;
 }
