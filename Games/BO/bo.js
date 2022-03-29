@@ -10,6 +10,7 @@ const playerHeight = 20
 const ballDiameter = 20
 const playerCoordinate = [230, 10]
 const ballCoordinates = [270, 40]
+let s = false
 let playerCurrentCoords = playerCoordinate
 let ballCurrentCoords = ballCoordinates
 let tId
@@ -103,6 +104,24 @@ function movePlayer(event) {
             break;
     }
 }
+//player controls with buttons
+function moveLeft() {
+    if (s) {
+        if (playerCurrentCoords[0] > 0) {
+            playerCurrentCoords[0] -= 10
+            playerDisplay()
+        }
+    }
+
+}
+function moveRight() {
+    if (s) {
+        if (playerCurrentCoords[0] < borderWidth - playerWidth) {
+            playerCurrentCoords[0] += 10
+            playerDisplay()
+        }
+    }
+}
 
 //ball movement
 function moveBall() {
@@ -183,6 +202,7 @@ function checkCollisions() {
 }
 
 function start() {
+    s = true
     tId = setInterval(moveBall, 20)
     document.addEventListener('keydown', movePlayer)
 }

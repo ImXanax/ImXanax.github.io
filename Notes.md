@@ -18,3 +18,7 @@ x responsive
 ## WM
 - change speed
 - add difficulty options
+
+## BO
+- attempt to make it responsive
+- fix header score font

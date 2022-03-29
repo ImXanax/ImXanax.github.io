@@ -12,7 +12,14 @@
 <body>
     <div>SCORE: <span class="score">0</span></div>
     <div class="border"></div>
-    <div id="start-btn"><button id="start" onclick="start(); this.onclick=null;">START</button></div>
+    <div class="direction-btn">
+        <button id="left" onclick="moveLeft()">LEFT</button>
+        <button id="right" onclick="moveRight()">RIGHT</button>
+    </div>
+    <br>
+    <div class="start-btn">
+        <button id="start" onclick="start(); this.onclick=null;">START</button>
+    </div>
     <div id="refresh"></div>
 
     <script src="bo.js"></script>
