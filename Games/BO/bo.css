@@ -87,10 +87,10 @@ body{
     font-weight:  bold;
     padding: 16px 16px;
     color: white;
-    background-color: rgb(17, 5, 119);
+    background-color: rgb(72, 10, 172);
     border-radius: 10px;
     outline: none;
     text-decoration: none;
-    box-shadow: 0 8px 0px #030025;
+    box-shadow: 0 8px 0px #040318;
     transition: all .2s;
 }
