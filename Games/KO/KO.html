@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Games/KO/KO.css" />
+    <title>Knock Out</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="health-bar">
+          <!-- player 1 HP-->
+          <div class="player">
+            <div class="p1" ></div>
+            <div class="p1-bar" id="playerHealth"></div>
+          </div>
+          <!-- timer -->
+          <div class="timer" id="t">10</div>
+          <!-- player 2 HP -->
+          <div class="enemy">
+            <div class="p2" ></div>
+            <div class="p2-bar" id="enemyHealth"></div>
+          </div>
+        </div>
+      </div>
+      <div id="result"></div>
+      <canvas></canvas>
+    </div>
+    <script src="/Games/KO/js/util.js"></script>
+    <script src="/Games/KO/js/classes.js"></script>
+    <script src="KO.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(59, 46, 43);
+    place-content: center;
+}
+.container{
+    display: inline-block;
+    position: relative;
+}
+/* .wrapper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+} */
+.health-bar{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0;
+    width: 100%;
+    padding: 20px;
+}
+.p1{
+    background-color: yellow;
+    height: 30px;
+    width: 100%;
+}
+.timer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    flex-shrink: 0;
+}
+.player{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    height: 30px;
+    width: 100%;
+}
+.p1{
+    width: 100%;
+    background-color: yellow;
+    height: 30px;
+}
+.p1-bar{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: blue;
+    position: absolute;
+}
+.enemy{
+    position: relative;
+    height: 30px;
+    width: 100%;
+}
+.p2{
+    background-color: yellow;
+    height: 30px;
+}
+.p2-bar{
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: blue;
+    position: absolute;
+}
+#result{
+    color: white;
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}

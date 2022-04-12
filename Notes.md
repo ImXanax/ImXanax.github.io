@@ -11,14 +11,17 @@ x fix drop down menu colors
 x img center issue on resize
 x responsive
 
+
 ## PT
 x fix styling & aesthetics 
 x responsive 
 
 ## WM
 - change speed
+- add counter for miss-clicks
 - add difficulty options
 
 ## BO
 - attempt to make it responsive
-- fix header score font
+x fix header score font
+- fix text overlap
