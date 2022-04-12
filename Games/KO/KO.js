@@ -250,7 +250,7 @@ function animate() {
     enemy.isAttacking = false;
   }
 
-  if (enemy.health <= 0 || enemy.health <= 0) {
+  if (player.health <= 0 || enemy.health <= 0) {
     resultsDisplay({ player, enemy, timerId });
   }
 }
