@@ -1,5 +1,5 @@
 # Description
-A hub to have access to all my socials + some games (for practice purposes random things might pop on it)
+A hub to have access to all my socials + some games
 Link -> [-l||l-](https://imxanax.github.io/)
 
 # Games
