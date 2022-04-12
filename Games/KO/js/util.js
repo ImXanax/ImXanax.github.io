@@ -9,6 +9,7 @@ function checkCollision({ r1, r2 }) {
   
   function resultsDisplay({ player, enemy, timerId }) {
     clearTimeout(timerId);
+    bgAudio.pause()
     document.querySelector("#result").style.display = "flex";
     if (player.health === enemy.health) {
       document.querySelector("#result").textContent = "TIE";

@@ -1,12 +1,6 @@
 const canvas = document.querySelector("canvas");
 const c = canvas.getContext("2d");
-
-const bgAudio = new Audio('asset/audio/AncestorSpirit.mp3')
-
-bgAudio.addEventListener('canplaythrough', (e)=>{
-  console.log(e)
-  bgAudio.play()
-})
+const bgAudio = new Audio("asset/audio/AncestorSpirit.mp3");
 
 canvas.width = 1024;
 canvas.height = 576;
@@ -50,7 +44,7 @@ const player = new Players({
   frame: 8,
   scale: 2.5,
   offset: {
-    x: 210  ,
+    x: 210,
     y: 157,
   },
   sprites: {
@@ -169,8 +163,6 @@ const keys = {
   },
 };
 
-countDown();
-
 function animate() {
   window.requestAnimationFrame(animate);
   c.fillStyle = "black";
@@ -231,9 +223,9 @@ function animate() {
   ) {
     enemy.takeHit();
     player.isAttacking = false;
-    gsap.to('#enemyHealth', {
-      width: enemy.health + "%"
-    })
+    gsap.to("#enemyHealth", {
+      width: enemy.health + "%",
+    });
   }
   if (player.isAttacking && player.framesCurrent === 4) {
     player.isAttacking = false;
@@ -249,9 +241,9 @@ function animate() {
   ) {
     player.takeHit();
     enemy.isAttacking = false;
-    gsap.to('#playerHealth', {
-      width: player.health + "%"
-    })
+    gsap.to("#playerHealth", {
+      width: player.health + "%",
+    });
   }
   if (enemy.isAttacking && enemy.framesCurrent === 2) {
     enemy.isAttacking = false;
@@ -261,8 +253,6 @@ function animate() {
     resultsDisplay({ player, enemy, timerId });
   }
 }
-
-animate();
 
 //controllers
 window.addEventListener("keydown", (e) => {
@@ -324,3 +314,17 @@ window.addEventListener("keyup", (e) => {
       break;
   }
 });
+
+function audio() {
+  bgAudio.volume = 0.8;
+  bgAudio.play();
+}
+
+function start() {
+  countDown();
+  animate();
+  bgAudio.addEventListener("canplaythrough", audio());
+  document.querySelector("#wrapper").style.backgroundColor = "transparent";
+  document.querySelector("#txt").textContent = "";
+  document.querySelector(".health-bar").style.display = "flex";
+}

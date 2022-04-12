@@ -15,7 +15,9 @@
   </head>
   <body>
     <div class="container">
-      <div class="wrapper">
+      
+      <div id="wrapper" onclick="start(); this.onclick=null;">
+        <p id="txt">CLICK TO START</p>
         <div class="health-bar">
           <!-- player 1 HP-->
           <div class="player">
@@ -23,7 +25,7 @@
             <div class="p1-bar" id="playerHealth"></div>
           </div>
           <!-- timer -->
-          <div class="timer" id="t">10</div>
+          <div class="timer" id="t"></div>
           <!-- player 2 HP -->
           <div class="enemy">
             <div class="p2"></div>

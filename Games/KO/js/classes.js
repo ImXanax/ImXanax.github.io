@@ -85,6 +85,7 @@ class Players extends Sprite {
     this.health = 100;
     this.color = color;
     this.isAttacking;
+    this.isGrounded;
     this.framesCurrent = 0;
     this.framesElapsed = 0;
     this.framesHold = 6;
@@ -114,6 +115,7 @@ class Players extends Sprite {
 
     //checks if P/E's height is greater than canvas height
     if (this.position.y + this.height + this.velocity.y >= canvas.height - 96) {
+      this.isGrounded = true
       this.velocity.y = 0;
       this.position.y = 330;
     } //if not add gravity to the velocity
