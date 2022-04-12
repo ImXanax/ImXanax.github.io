@@ -1,7 +1,7 @@
 const canvas = document.querySelector("canvas");
 const c = canvas.getContext("2d");
 const bgAudio = new Audio("asset/audio/AncestorSpirit.mp3");
-const slashAudio = new Audio("asset/audio/slash.wav")
+const slashAudio = new Audio("asset/audio/slash.wav");
 
 canvas.width = 1024;
 canvas.height = 576;
@@ -181,11 +181,17 @@ function animate() {
 
   /* player movement */
   if (keys.d.pressed && player.lastKey === "d") {
-    player.velocity.x = 5;
-    player.switchSprite("run");
+    console.log(player.position.x);
+    console.log(canvas.width);
+    if (player.position.x <= canvas.width - 75) {
+      player.velocity.x = 5;
+      player.switchSprite("run");
+    }
   } else if (keys.a.pressed && player.lastKey === "a") {
-    player.velocity.x = -5;
-    player.switchSprite("run");
+    if (player.position.x >= 10) {
+      player.velocity.x = -5;
+      player.switchSprite("run");
+    }
   } else {
     player.switchSprite("idle");
   }
@@ -202,11 +208,15 @@ function animate() {
 
   /* enemy movement */
   if (keys.ArrowRight.pressed && enemy.lastKey === "ArrowRight") {
-    enemy.velocity.x = 5;
-    enemy.switchSprite("run");
+    if (enemy.position.x <= canvas.width - 75) {
+      enemy.velocity.x = 5;
+      enemy.switchSprite("run");
+    }
   } else if (keys.ArrowLeft.pressed && enemy.lastKey === "ArrowLeft") {
-    enemy.velocity.x = -5;
-    enemy.switchSprite("run");
+    if (enemy.position.x >= 10) {
+      enemy.velocity.x = -5;
+      enemy.switchSprite("run");
+    }
   } else {
     enemy.switchSprite("idle");
   }
@@ -340,5 +350,5 @@ function start() {
   document.querySelector("#wrapper").style.backgroundImage = "none";
   document.querySelector("#txt").textContent = "";
   document.querySelector(".health-bar").style.display = "flex";
-  document.body.style.backgroundColor = "#000000"
+  document.body.style.backgroundColor = "#000000";
 }
