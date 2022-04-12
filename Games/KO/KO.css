@@ -7,7 +7,7 @@
 body{
     display: grid;
     height: 100vh;
-    background-color: rgb(59, 46, 43);
+    background-color: rgb(0, 0, 0);
     place-content: center;
 }
 .container{
