@@ -7,7 +7,7 @@
 body{
     display: grid;
     height: 100vh;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(81, 46, 28);
     place-content: center;
 }
 .container{
@@ -19,13 +19,17 @@ body{
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: rgba(78, 26, 190, 0.481);
+    background-image: url(asset/start.png);
+    background-size: 1024px ;
     font-size: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: rgb(255, 255, 255);
 } 
+p{
+    text-shadow: 3px 5px black;
+}
 .health-bar{
     position: absolute;
     display: none;

@@ -189,6 +189,7 @@ class Players extends Sprite {
         if (this.image !== this.sprites.attack1.image) {
           this.image = this.sprites.attack1.image;
           this.frame = this.sprites.attack1.frame;
+          slashAudio.play()
           this.framesCurrent = 0;
         }
         break;

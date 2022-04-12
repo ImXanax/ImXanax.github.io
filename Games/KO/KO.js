@@ -1,6 +1,7 @@
 const canvas = document.querySelector("canvas");
 const c = canvas.getContext("2d");
 const bgAudio = new Audio("asset/audio/AncestorSpirit.mp3");
+const slashAudio = new Audio("asset/audio/slash.wav")
 
 canvas.width = 1024;
 canvas.height = 576;
@@ -336,7 +337,8 @@ function start() {
   countDown();
   animate();
   bgAudio.addEventListener("canplaythrough", audio());
-  document.querySelector("#wrapper").style.backgroundColor = "transparent";
+  document.querySelector("#wrapper").style.backgroundImage = "none";
   document.querySelector("#txt").textContent = "";
   document.querySelector(".health-bar").style.display = "flex";
+  document.body.style.backgroundColor = "#000000"
 }
