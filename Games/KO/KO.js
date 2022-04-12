@@ -1,6 +1,13 @@
 const canvas = document.querySelector("canvas");
 const c = canvas.getContext("2d");
 
+const bgAudio = new Audio('asset/audio/AncestorSpirit.mp3')
+
+bgAudio.addEventListener('canplaythrough', (e)=>{
+  console.log(e)
+  bgAudio.play()
+})
+
 canvas.width = 1024;
 canvas.height = 576;
 
@@ -43,7 +50,7 @@ const player = new Players({
   frame: 8,
   scale: 2.5,
   offset: {
-    x: 215,
+    x: 210  ,
     y: 157,
   },
   sprites: {

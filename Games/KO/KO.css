@@ -5,12 +5,15 @@
     font-family: 'Press Start 2P', cursive;
 }
 body{
+    display: grid;
+    height: 100vh;
     background-color: rgb(59, 46, 43);
     place-content: center;
 }
 .container{
     display: inline-block;
     position: relative;
+    border: solid white 4px;
 }
 /* .wrapper{
     position: absolute;

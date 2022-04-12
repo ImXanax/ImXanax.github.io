@@ -19,7 +19,7 @@ function checkCollision({ r1, r2 }) {
     }
   }
   
-  let timer = 60;
+  let timer = 70;
   let timerId;
   function countDown() {
     if (timer > 0) {
