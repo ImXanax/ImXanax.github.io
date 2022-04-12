@@ -1,9 +1,15 @@
 # Description
-A hub to have access to all my socials (for practice purposes random things might pop on it)
+A hub to have access to all my socials + some games (for practice purposes random things might pop on it)
 Link -> [-l||l-](https://imxanax.github.io/)
 
+# Games
+- [Rock Paper Scissors](https://imxanax.github.io/Games/RPC/rpc.html)
+- [Pair Two](https://imxanax.github.io/Games/PT/pt.html)
+- [Whack-A-Mole](https://imxanax.github.io/Games/WM/wm.html)
+- [Break Out](https://imxanax.github.io/Games/BO/bo.html)
+- [Knock Out - 2 Player](https://imxanax.github.io/Games/KO/KO.html)
 
-# Links
+# Socials
 - [Instagram](https://www.instagram.com/lmxanax/)
 - [Twitter](https://twitter.com/lmxanax)
 - [Discord](https://discord.gg/E3wrKUDpz8)
