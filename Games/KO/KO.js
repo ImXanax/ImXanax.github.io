@@ -190,9 +190,13 @@ function animate() {
   }
   // player jumping
   if (player.velocity.y < 0) {
+    player.isJumping = true;
     player.switchSprite("jump");
   } else if (player.velocity.y > 0) {
+    player.isJumping = true;
     player.switchSprite("fall");
+  } else if (player.velocity.y === 0) {
+    player.isJumping = false;
   }
 
   /* enemy movement */
@@ -207,9 +211,13 @@ function animate() {
   }
   //enemy jumping
   if (enemy.velocity.y < 0) {
+    enemy.isJumping = true;
     enemy.switchSprite("jump");
   } else if (enemy.velocity.y > 0) {
+    enemy.isJumping = true;
     enemy.switchSprite("fall");
+  } else if (enemy.velocity.y === 0) {
+    enemy.isJumping = false;
   }
 
   //collision
@@ -268,7 +276,9 @@ window.addEventListener("keydown", (e) => {
         player.lastKey = "a";
         break;
       case "w":
-        player.velocity.y = -20;
+        if (!player.isJumping) {
+          player.velocity.y = -20;
+        } else return;
         break;
       case " ":
         player.attack();
@@ -287,7 +297,9 @@ window.addEventListener("keydown", (e) => {
         enemy.lastKey = "ArrowLeft";
         break;
       case "ArrowUp":
-        enemy.velocity.y = -20;
+        if (!enemy.isJumping) {
+          enemy.velocity.y = -20;
+        } else return;
         break;
       case "0":
         enemy.attack();

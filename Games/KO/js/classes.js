@@ -91,6 +91,7 @@ class Players extends Sprite {
     this.framesHold = 6;
     this.sprites = sprites;
     this.dead = false;
+    this.isJumping
 
     for (const sprite in this.sprites) {
       sprites[sprite].image = new Image();
