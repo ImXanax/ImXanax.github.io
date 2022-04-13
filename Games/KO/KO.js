@@ -181,8 +181,9 @@ function animate() {
 
   /* player movement */
   if (keys.d.pressed && player.lastKey === "d") {
-    console.log(player.position.x);
-    console.log(canvas.width);
+    
+    // console.log(player.position.x);
+    // console.log(canvas.width);
     if (player.position.x <= canvas.width - 75) {
       player.velocity.x = 5;
       player.switchSprite("run");
