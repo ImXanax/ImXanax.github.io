@@ -2,6 +2,8 @@ const canvas = document.querySelector("canvas");
 const c = canvas.getContext("2d");
 const bgAudio = new Audio("asset/audio/AncestorSpirit.mp3");
 const slashAudio = new Audio("asset/audio/slash.wav");
+const sound = document.getElementById('audio').src = "/Games/KO/asset/soundon.png"
+
 
 canvas.width = 1024;
 canvas.height = 576;
@@ -181,7 +183,6 @@ function animate() {
 
   /* player movement */
   if (keys.d.pressed && player.lastKey === "d") {
-    
     // console.log(player.position.x);
     // console.log(canvas.width);
     if (player.position.x <= canvas.width - 75) {
@@ -342,6 +343,16 @@ window.addEventListener("keyup", (e) => {
 function audio() {
   bgAudio.volume = 0.8;
   bgAudio.play();
+}
+
+function soundSetting(e) {
+  if(e.src.endsWith('soundon.png')){
+    e.src = "/Games/KO/asset/soundoff.png"
+    bgAudio.muted = true
+  }else if(e.src.endsWith('soundoff.png')){
+    e.src = "/Games/KO/asset/soundon.png"
+    bgAudio.muted = false
+  }
 }
 
 function start() {
