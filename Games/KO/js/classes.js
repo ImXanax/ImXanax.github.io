@@ -91,7 +91,7 @@ class Players extends Sprite {
     this.framesHold = 6;
     this.sprites = sprites;
     this.dead = false;
-    this.isJumping
+    this.isJumping;
 
     for (const sprite in this.sprites) {
       sprites[sprite].image = new Image();
@@ -116,7 +116,7 @@ class Players extends Sprite {
 
     //checks if P/E's height is greater than canvas height
     if (this.position.y + this.height + this.velocity.y >= canvas.height - 96) {
-      this.isGrounded = true
+      this.isGrounded = true;
       this.velocity.y = 0;
       this.position.y = 330;
     } //if not add gravity to the velocity
@@ -129,8 +129,14 @@ class Players extends Sprite {
     this.switchSprite("attack1");
     this.isAttacking = true;
   }
-  takeHit() {
-    this.health -= 10;
+  takeHit(fighter) {
+    //p1 more damage - p2 faster attack
+    if (fighter === "p") {
+      this.health -= 10;
+    } else if (fighter === "e") {
+      this.health -= 15;
+    }
+    console.log(fighter);
     if (this.health <= 0) {
       this.switchSprite("death");
     } else {
@@ -189,7 +195,7 @@ class Players extends Sprite {
         if (this.image !== this.sprites.attack1.image) {
           this.image = this.sprites.attack1.image;
           this.frame = this.sprites.attack1.frame;
-          slashAudio.play()
+          slashAudio.play();
           this.framesCurrent = 0;
         }
         break;

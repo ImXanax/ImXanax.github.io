@@ -242,7 +242,7 @@ function animate() {
     player.isAttacking &&
     player.framesCurrent === 4
   ) {
-    enemy.takeHit();
+    enemy.takeHit('e');
     player.isAttacking = false;
     gsap.to("#enemyHealth", {
       width: enemy.health + "%",
@@ -260,7 +260,7 @@ function animate() {
     enemy.isAttacking &&
     enemy.framesCurrent === 2
   ) {
-    player.takeHit();
+    player.takeHit('p');
     enemy.isAttacking = false;
     gsap.to("#playerHealth", {
       width: player.health + "%",
