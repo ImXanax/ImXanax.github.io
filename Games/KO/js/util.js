@@ -12,11 +12,11 @@ function checkCollision({ r1, r2 }) {
     bgAudio.pause()
     document.querySelector("#result").style.display = "flex";
     if (player.health === enemy.health) {
-      document.querySelector("#result").textContent = "TIE";
+      document.querySelector("#result").textContent = "DRAW";
     } else if (player.health > enemy.health) {
-      document.querySelector("#result").textContent = "Player 1 Won";
+      document.querySelector("#result").textContent = "PLAYER 1 WINS";
     } else if (enemy.health > player.health) {
-      document.querySelector("#result").textContent = "Player 2 Won";
+      document.querySelector("#result").textContent = "PLAYER 2 WINS";
     }
   }
   

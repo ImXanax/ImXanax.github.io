@@ -7,7 +7,10 @@
 body{
     display: grid;
     height: 100vh;
-    background-color: rgb(81, 46, 28);
+    background-image:url("http://twistedsifter.com/wp-content/uploads/2013/05/animated-gifs-of-fighting-game-backgrounds-8.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: rgb(81, 46, 28); */
     place-content: center;
 }
 .container{
@@ -38,7 +41,7 @@ p{
     flex-shrink: 0;
     width: 100%;
     padding: 20px;
-    top: 495px;
+    top: 0px;
     
 }
 .timer{
@@ -46,25 +49,25 @@ p{
     justify-content: center;
     align-items: center;
     font-size: 25px;
-    background-color: rgb(9, 9, 63);
+    background-color: rgb(96, 77, 63);
     height: 55px;
     width: 70px;
     flex-shrink: 0;
     color: rgb(255, 255, 255);
-    border: 4px solid rgb(210, 223, 223);
+    border: 5px solid rgb(0, 0, 0);
 }
 .player{
     display: flex;
     justify-content: flex-end;
     position: relative;
     width: 100%;
-    border-top: 4px solid rgb(210, 223, 223);
-    border-left: 4px solid rgb(210, 223, 223);
-    border-bottom: 4px solid rgb(210, 223, 223);
+    border-top: 5px solid rgb(0, 0, 0);
+    border-left: 5px solid rgb(0, 0, 0);
+    border-bottom: 5px solid rgb(0, 0, 0);
 }
 .p1{
     width: 100%;
-    background-color: rgb(66, 48, 88);
+    background-color: rgb(130, 112, 153);
     height: 30px;
     
 }
@@ -73,18 +76,18 @@ p{
     right: 0;
     bottom: 0;
     width: 100%;
-    background-color: #993838;
+    background-color: #6f2121;
     position: absolute;
 }
 .enemy{
     position: relative;
     width: 100%;
-    border-top: 4px solid rgb(210, 223, 223);
-    border-right: 4px solid rgb(210, 223, 223);
-    border-bottom: 4px solid rgb(210, 223, 223);
+    border-top: 5px solid rgb(0, 0, 0);
+    border-right: 5px solid rgb(0, 0, 0);
+    border-bottom: 5px solid rgb(0, 0, 0);
 }
 .p2{
-    background-color: rgb(66, 48, 88);
+    background-color: rgb(130, 112, 153);
     height: 30px;
 }
 .p2-bar{
@@ -92,11 +95,13 @@ p{
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: #993838;
+    background-color: #6f2121;
     position: absolute;
 }
 #result{
     color: white;
+    font-size: 20px;
+    text-shadow: rgb(48, 3, 73) 4px 3px;
     position: absolute;
     display: none;
     justify-content: center;
@@ -110,6 +115,6 @@ p{
     height: 30px;
     width: 30px;
     position: absolute;
-    top: 10px;
+    top: 540px;
     left: 10px;
 }
