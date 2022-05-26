@@ -1,6 +1,8 @@
 # Description
-A hub to have access to all my socials + some games
-Link -> [-l||l-](https://imxanax.github.io/)
+Personal test website that contains a portal to my socials
+plus it includes game dev and practice
+
+Link --> [-l||l-](https://imxanax.github.io/)
 
 ![](/images/preview.png)
 
