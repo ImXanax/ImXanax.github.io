@@ -2,6 +2,8 @@
 A hub to have access to all my socials + some games
 Link -> [-l||l-](https://imxanax.github.io/)
 
+![](/images/preview.png)
+
 # Games
 - [Rock Paper Scissors](https://imxanax.github.io/Games/RPC/rpc.html)
 - [Pair Two](https://imxanax.github.io/Games/PT/pt.html)
