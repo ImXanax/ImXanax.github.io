@@ -18,6 +18,22 @@ body{
     position: relative;
     border: solid white 4px;
 }
+/* #popup{
+    z-index: 2;
+    position: absolute;
+    height: 300px;
+    width: 500px;
+    left: 0;
+    right:0;
+    top: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #000000ec;
+    color: rgb(248, 241, 241);
+    border-radius: 10%;
+    filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+} */
 #wrapper{
     position: absolute;
     height: 100%;

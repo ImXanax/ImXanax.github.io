@@ -358,9 +358,9 @@ function soundSetting(e) {
 function start() {
   countDown();
   animate();
-  bgAudio.addEventListener("canplaythrough", audio());
-  document.querySelector("#wrapper").style.backgroundImage = "none";
   document.querySelector("#txt").textContent = "";
   document.querySelector(".health-bar").style.display = "flex";
+  bgAudio.addEventListener("canplaythrough", audio());
+  document.querySelector("#wrapper").style.backgroundImage = "none";
   document.body.style.backgroundColor = "#000000";
 }
