@@ -17,23 +17,33 @@ body {
 
 }
 .wrapper {
-margin-top: 20px;
+   margin-top: 20px;
   max-width: 100%;
   max-height: 100%;
+  background-color: rgba(13, 8, 34);
   width: 1500px;
   color: rgb(216, 212, 218);
   font-family: "Varela Round", sans-serif;
-  background-color: rgba(13, 8, 34);
-  z-index: 1;
 }
-
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 p.logo {
-  position: relative;
+  height: 100%;
+  width: 100px;
   color: aliceblue;
-  font-size: 50px;
   text-align: center;
   padding-bottom: 10px;
+  font-size: 50px;
+  opacity: 1;
+  transition: opacity 500ms;
   z-index: 3;
+}
+p.logo:hover{
+  opacity: 0;
 }
 .nav-bar {
   height: auto;
@@ -63,7 +73,7 @@ li a,
 }
 li a:hover,
 .dropdown:hover .dropdbtn {
-  background-color: rgb(15, 2, 46);
+  background-color: rgba(13, 8, 34);
 }
 li.dropdown {
   display: inline-block;
