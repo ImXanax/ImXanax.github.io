@@ -20,6 +20,7 @@ body {
   height: 100%;
   width: 100%;
   z-index: 1;
+  overflow: hidden;
 }
 .bubble1 {
   background-image: linear-gradient(
@@ -37,6 +38,87 @@ body {
   position: absolute;
   left: 5%;
   top: 10%;
+}
+.bubble2 {
+  background-image: linear-gradient(
+    to right,
+    #b8cbb8 0%,
+    #b8cbb8 0%,
+    #b465da 0%,
+    #cf6cc9 33%,
+    #ee609c 66%,
+    #ee609c 100%
+  );
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  position: absolute;
+  left: 25%;
+  top: 20%;
+}
+.bubble3 {
+  background-image: linear-gradient(
+    to right,
+    #b8cbb8 0%,
+    #b8cbb8 0%,
+    #b465da 0%,
+    #cf6cc9 33%,
+    #ee609c 66%,
+    #ee609c 100%
+  );
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  left: 85%;
+  top: 6%;
+}
+.bubble4 {
+  background-image: linear-gradient(
+    to right,
+    #b8cbb8 0%,
+    #b8cbb8 0%,
+    #b465da 0%,
+    #cf6cc9 33%,
+    #ee609c 66%,
+    #ee609c 100%
+  );
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  position: absolute;
+  left: 55%;
+  top: 20%;
+}
+.bubble5 {
+  background: linear-gradient(
+    163deg,
+    rgba(10, 192, 226, 1) 0%,
+    rgba(231, 106, 213, 1) 50%,
+    rgba(255, 224, 100, 1) 100%
+  );
+  filter: blur(100px);
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  position: absolute;
+  left: 78%;
+  top: 46%;
+}
+.bubble6 {
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  filter: blur(100px);
+  width: 410px;
+  height: 410px;
+  border-radius: 50%;
+  position: absolute;
+  left: -6%;
+  top: 60%;
 }
 .wrapper {
   margin-top: 20px;
@@ -64,7 +146,7 @@ p.logo {
   transition: opacity 800ms ease-in-out;
   z-index: 3;
 }
-p.logo:hover{
+p.logo:hover {
   opacity: 0;
 }
 .l {
