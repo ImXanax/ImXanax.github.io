@@ -14,18 +14,25 @@ body {
   height: 100%;
   overflow-x: hidden;
   background-color: rgba(13, 8, 34);
-
 }
-.bg-bubbles{
+.bg-bubbles {
   position: absolute;
   height: 100%;
   width: 100%;
   z-index: 1;
 }
-.bubble1{
-  background-color: aqua;
-  width: 100px;
-  height: 100px;
+.bubble1 {
+  background-image: linear-gradient(
+    to right,
+    #b8cbb8 0%,
+    #b8cbb8 0%,
+    #b465da 0%,
+    #cf6cc9 33%,
+    #ee609c 66%,
+    #ee609c 100%
+  );
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   position: absolute;
   left: 5%;
@@ -42,15 +49,24 @@ body {
   z-index: 2;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 p.logo {
-  position: relative;
   color: aliceblue;
   font-size: 50px;
   text-align: center;
   padding-bottom: 10px;
+  opacity: 1;
+  transition: opacity 800ms ease-in-out;
   z-index: 3;
 }
-
+p.logo:hover{
+  opacity: 0;
+}
 .l {
   display: flex;
   height: 100%;
@@ -142,11 +158,10 @@ p.logo {
 }
 
 @media only screen and (max-width: 749px) {
-    .bubbles{
-        display: none;
-    }
-    .glass{
-        background-color: rgba(13, 8, 34);
-
-    }
+  .bubbles {
+    display: none;
   }
+  .glass {
+    background-color: rgba(13, 8, 34);
+  }
+}
