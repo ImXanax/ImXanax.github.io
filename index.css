@@ -49,6 +49,8 @@ p.logo:hover {
   width: auto;
   display: flex;
   justify-content: center;
+  
+  margin-bottom: 30px;
 }
 ul {
   list-style-type: none;
@@ -104,33 +106,32 @@ li.dropdown {
   text-align: center;
   font-family: "Varela Round", sans-serif;
 }
-
-.typewriter h1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.typewriter h1 {
+  height: auto;
+  padding: 10px;
+  width: 305px;
   text-align: center;
   color: aliceblue;
   font-family: "Varela Round", sans-serif;
-  overflow:hidden;
-  border-right: .15em solid red;
-  letter-spacing: .15em;
+  overflow: hidden;
+  border-right: 0.1em solid rgb(112, 53, 215);
+  letter-spacing: 0.15em;
   white-space: nowrap;
   margin: 0 auto;
-
-  animation: typing 3.5s steps(30,end),
-  curs .5s step-end infinite;
+  animation: typing 3s steps(26, end), curs 0.3s step-end infinite alternate;
 }
-@keyframes typing{
-  from{width: 0%;}
-  to{width: 100%;}
+#typewriter-name{
+  color: blueviolet;
+  text-shadow: 0px 8px black;
 }
-@keyframes curs{
-  from,to{
-    border-color: transparent;
+@keyframes typing {
+  from {
+    width: 0%;
   }
-  50%{
-    border-color: blue;
+}
+@keyframes curs {
+  50% {
+    border-color: transparent;
   }
 }
 @media only screen and (max-width: 749px) {
