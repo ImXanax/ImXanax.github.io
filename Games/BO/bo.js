@@ -17,6 +17,7 @@ let tId
 let xDir = 2
 let yDir = 2
 let score = 0
+refreshDisplay.textContent = 'REFRESH THE PAGE TO REPLAY'
 
 class Block {
     constructor(x, y) {

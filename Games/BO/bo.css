@@ -1,96 +1,114 @@
-body{
-    background-color: rgb(3, 9, 63);
-    color: whitesmoke;
-    text-align: center;
-    max-width: 100%;
-    overflow-x: hidden;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+html,
+body {
+  color: whitesmoke;
+  text-align: center;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+
+  font-family: "Varela Round", sans-serif;
 }
-.border{
+.wrapper {
+  background: linear-gradient(
+    0deg,
+    rgba(10, 10, 69, 1) 0%,
+    rgb(36, 12, 103) 50%,
+    rgb(58, 24, 74) 100%
+  );
+  height: 100%;
+  width: 100%;
+}
+.border {
+  position: absolute;
+  width: 560px;
+  height: 300px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border: solid rgb(255, 255, 255) 2px;
+}
+.block {
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  background-color: rgb(205, 20, 106);
+}
+.player {
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  background-color: rgb(18, 163, 139);
+}
+.ball {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: white;
+}
+.score {
+  color: rgb(4, 177, 148);
+}
+.score-section{
     position: absolute;
-    width: 560px;
-    height: 300px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    border: solid rgb(255, 255, 255) 2px;
+    top: 45%;
+    left: 48%;
 }
-.block{
-    position: absolute;
-    width: 100px;
-    height: 20px;
-    background-color: rgb(219, 129, 10);
+#refresh {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: rgb(179, 54, 54);
+  font-size: 20px;
 }
-.player{
-    position: absolute;
-    width: 100px;
-    height: 20px;
-    background-color: rgb(62, 190, 162);
+.start-btn {
+  position: absolute;
+  top: 67%;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
-.ball{
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
-    background-color: white;
+.start-btn button {
+  border: none;
+  margin: 10px;
+  top: 0;
+  font-size: 26px;
+  font-family: "Varela Round", sans-serif;
+  font-weight: bold;
+  padding: 16px 16px;
+  color: white;
+  background-color: rgb(17, 5, 119);
+  border-radius: 10px;
+  outline: none;
+  text-decoration: none;
+  box-shadow: 0 8px 0px #030025;
+  transition: all 0.2s;
 }
-.score{
-    color: rgb(4, 177, 148);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.start-btn button:active {
+  top: 80%;
+  box-shadow: 0 2px 0px #000000;
+  transition: all 0.2s;
 }
-#refresh{
-    position: absolute;
-    top: 67%; 
-    left: 50%;
-    transform: translate(-50%,0);
-    color: rgb(179, 54, 54);
-    font-size: 20px;
+.direction-btn {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
-.start-btn{
-    position: absolute;
-    top: 67%;
-    left: 50%;
-    transform: translate(-50%,0);
-}
-.start-btn button{
-    border: none;
-    margin: 10px;
-    top: 0;
-    font-size: 26px;
-    font-family: 'Varela Round', sans-serif;
-    font-weight:  bold;
-    padding: 16px 16px;
-    color: white;
-    background-color: rgb(17, 5, 119);
-    border-radius: 10px;
-    outline: none;
-    text-decoration: none;
-    box-shadow: 0 8px 0px #030025;
-    transition: all .2s;
-}
-.start-btn button:active{
-    top: 80%;
-    box-shadow: 0 2px 0px #000000;
-    transition: all .2s;
-}
-.direction-btn{
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%,0);
-}
-.direction-btn button{
-    border: none;
-    margin: 10px;
-    top: 0;
-    font-size: 26px;
-    font-family: 'Varela Round', sans-serif;
-    font-weight:  bold;
-    padding: 16px 16px;
-    color: white;
-    background-color: rgb(72, 10, 172);
-    border-radius: 10px;
-    outline: none;
-    text-decoration: none;
-    box-shadow: 0 8px 0px #040318;
-    transition: all .2s;
+.direction-btn button {
+  border: none;
+  margin: 10px;
+  top: 0;
+  font-size: 26px;
+  font-family: "Varela Round", sans-serif;
+  font-weight: bold;
+  padding: 16px 30px;
+  color: white;
+  background-color: rgb(72, 10, 172);
+  border-radius: 10px;
+  outline: none;
+  text-decoration: none;
+  box-shadow: 0 8px 0px #040318;
+  transition: all 0.2s;
 }
