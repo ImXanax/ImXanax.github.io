@@ -4,7 +4,7 @@ const scoreDisplay = document.querySelector("#score");
 const timeDisplay = document.querySelector("#time");
 const timesUpDisplay = document.getElementById(`times-up`);
 const difficultyOption = document.querySelectorAll(
-  'input[name="difficulty-level"]'
+  'input[name="diff-level"]'
 );
 let clickedBox;
 let score = 0;
