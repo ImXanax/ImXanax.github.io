@@ -1,6 +1,11 @@
-## WM
-- add counter for miss-clicks
-
 ## BO
 - attempt to make it responsive
-- fix text overlap
+- change aesthetic 
+- pop up displaying control options
+
+## RPC
+- overhaul
+- score display animation
+
+## KO
+- pop up displaying controls
