@@ -11,12 +11,7 @@ body {
   font-family: "Varela Round", sans-serif;
 }
 .wrapper {
-  background: linear-gradient(
-    0deg,
-    rgba(10, 10, 69, 1) 0%,
-    rgb(36, 12, 103) 50%,
-    rgb(58, 24, 74) 100%
-  );
+  background-color: rgba(10, 10, 69);
   height: 100%;
   width: 100%;
 }
@@ -32,7 +27,8 @@ body {
   position: absolute;
   width: 100px;
   height: 20px;
-  background-color: rgb(205, 20, 106);
+  background-color: rgb(59, 7, 203);
+  box-shadow: 0px 10px #130425;
 }
 .player {
   position: absolute;
@@ -53,7 +49,7 @@ body {
 .score-section{
     position: absolute;
     top: 45%;
-    left: 48%;
+    left: 46%;
 }
 #refresh {
   position: absolute;
@@ -92,7 +88,7 @@ body {
 }
 .direction-btn {
   position: absolute;
-  top: 55%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, 0);
 }

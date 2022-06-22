@@ -171,7 +171,7 @@ p.logo:hover {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   backdrop-filter: blur(10px);
-  margin: 2% 2% 2% 2%;
+  margin: 1% 1% 1% 1%;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
   z-index: 3;
@@ -245,5 +245,8 @@ p.logo:hover {
   }
   .glass {
     background-color: rgba(13, 8, 34);
+  }
+  .box{
+    margin-top: 3%;
   }
 }
