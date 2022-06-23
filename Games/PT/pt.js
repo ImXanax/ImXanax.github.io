@@ -76,7 +76,7 @@ function matchCheck(){
 
     if(firstCardId === secondCardId){
         alert(`You Clicked The Same Card`)
-        cards[firstCardId].setAttribute('src' , 'images/blank.gif')
+        cards[firstCardId].setAttribute('src' , 'images/blank.png')
     }
     else if(chosenCard[0] === chosenCard[1]){
         alert(`You Found A Match`)
