@@ -1,7 +1,6 @@
 ## BO
 - attempt to make it responsive
 - change aesthetic 
-- pop up displaying control options
 
 ## RPC
 - overhaul

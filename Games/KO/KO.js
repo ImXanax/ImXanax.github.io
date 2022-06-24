@@ -277,6 +277,7 @@ function animate() {
 
 //controllers
 window.addEventListener("keydown", (e) => {
+  
   if (!player.dead) {
     switch (e.key) {
       //player keys
