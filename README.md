@@ -21,3 +21,6 @@ Link --> [-l||l-](https://imxanax.github.io/)
 - [Pinterest](https://www.pinterest.com/lmxanax/)
 - [Github](https://github.com/ImXanax)
 - [Spotify](https://open.spotify.com/user/q5cogcvz190sjtutx25q0s4kx?si=8d436672d86242dd)
+
+# Notepad
+- [insert picture here]
