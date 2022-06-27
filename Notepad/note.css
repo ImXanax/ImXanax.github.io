@@ -50,7 +50,7 @@ body {
   height: 50px;
   width: 100%;
   padding-left: 30px;
-  border-bottom: 1px solid rgb(16, 20, 33);
+  border-bottom: 1px solid rgba(113 119 144 / 25%);
 }
 .app-header-circles {
   border-radius: 50%;
@@ -118,7 +118,7 @@ body {
   border-bottom: 1px solid white;
 }
 .close:hover {
-  color: rgb(239, 55, 55);
+  color: rgba(252, 0, 0, 0.886);
   background-color: rgba(99, 36, 176, 0.228);
   border-bottom: 1px solid white;
 }
