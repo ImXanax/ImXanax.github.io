@@ -306,4 +306,7 @@ input[type="checkbox"]:checked::before {
   .input-wrapper input{
     font-size: 30px;
   }
+  .input-wrapper .input-add{
+    font-size: 30px;
+  }
 }
