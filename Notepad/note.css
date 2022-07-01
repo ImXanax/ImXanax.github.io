@@ -38,7 +38,7 @@ body {
   overflow: hidden;
   max-width: 1250px;
   max-height: 860px;
-  height: 90%;
+  height: 95%;
   width: 100%;
   backdrop-filter: blur(20px);
   background-color: rgba(29, 38, 67, 0.696);
@@ -297,11 +297,18 @@ input[type="checkbox"]:checked::before {
   }
 }
 @media screen and (max-width:579px) {
+  .container{
+    padding: 0;
+  }
+  .app{
+    height: 100%;
+  }
   .app-body{
-    height:60vh;
+    height:80vh;
   }
   .app-footer{
     padding: 10px;
+    height: 20vh;
   }
   .input-wrapper{
     width: 360px;
