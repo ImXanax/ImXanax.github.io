@@ -129,7 +129,7 @@ body {
 
   padding: 5px;
   width: 100%;
-  height: 475px;
+  height: 100%;
   /* background-color: #5e18c73a; */
 }
 .tasks {
@@ -286,7 +286,7 @@ input[type="checkbox"]:checked::before {
 }
 @media screen and (max-width:579px) {
   .app-body{
-    height:375px;
+    height:60vh;
   }
   .app-footer{
     padding: 10px;
@@ -309,4 +309,9 @@ input[type="checkbox"]:checked::before {
   .input-wrapper .input-add{
     font-size: 30px;
   }
+}
+@media screen and (max-width:289px) {
+  .app-header-circles{
+    display: none;
+  }  
 }
