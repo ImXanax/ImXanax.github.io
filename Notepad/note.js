@@ -2,6 +2,7 @@ const num = document.querySelectorAll('input[type="checkbox"]');
 const btn = document.querySelector(".input-add");
 const taskContainer = document.querySelector(".tasks");
 const cards = document.querySelectorAll('li[class="card"]');
+const taskInput = document.querySelector('input[type="text"]')
 // const cardPlaceholder = document.createElement('div')
 // cardPlaceholder.classList.add('next-card')
 // taskContainer.appendChild(cardPlaceholder)
@@ -20,8 +21,9 @@ function createCard() {
     const task = document.createElement("p");
     task.classList.add("item");
 
-    task.textContent = "testing functionality...";
+    let todo = taskInput.value ? taskInput.value : 'Nothing Specified...';
 
+    task.textContent = todo
     newCard.appendChild(newCardUtil);
     newCardUtil.appendChild(checkBox);
     newCardUtil.appendChild(deleteBtn);
