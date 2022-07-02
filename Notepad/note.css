@@ -36,7 +36,7 @@ body {
   flex-direction: column;
   position: relative;
   overflow: hidden;
-  height: 95%;
+  height: 90%;
   width: 100%;
   backdrop-filter: blur(20px);
   background-color: rgba(29, 38, 67, 0.696);
@@ -216,6 +216,15 @@ input[type="checkbox"]:checked::before {
 }
 .delete:hover {
   background-color: rgb(190, 36, 36);
+}
+.next-card{
+  display: flex;
+  width: 250px;
+  column-gap: 0px;
+  height: 100px;
+  margin: 4px;
+  text-decoration: none;
+  border: 5px dashed rgba(41, 62, 103, 0.998);
 }
 .footer{
   display: flex;
