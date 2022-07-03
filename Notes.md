@@ -2,7 +2,9 @@
 - Semester Schedule Generator w/tables 
 
 ## To-do
-- to do pages w/ local storage
+- delete button functionality (note: probs dealing with assigning ids for each card)
+- add css or js for a compeleted task (strikethrough/grayed out)
+- add dark/light toggles??? (using css root)
 
 ## BO
 - attempt to make it responsive
