@@ -4,6 +4,8 @@ const taskContainer = document.querySelector(".tasks");
 const cards = document.querySelectorAll('li[class="card"]');
 const taskInput = document.querySelector('input[type="text"]');
 
+let cardId = 0;
+let itemId = 0;
 //adding placeholder for next card
 function addPlaceHolder() {
   //prevent overlapping element
@@ -21,6 +23,7 @@ function createCard() {
   //fetching required elements
   const newCard = document.createElement("li");
   newCard.classList.add("card");
+  newCard.setAttribute(`id`, `c${cardId++}`);
   const newCardUtil = document.createElement("div");
   newCardUtil.classList.add("card-util");
   const checkBox = document.createElement("input");
@@ -29,6 +32,7 @@ function createCard() {
   deleteBtn.classList.add("delete");
   const task = document.createElement("p");
   task.classList.add("item");
+  task.setAttribute("id", `i${itemId++}`);
 
   //deals with empty inputs
   let todo = taskInput.value ? taskInput.value : "Nothing Specified...";
@@ -40,6 +44,13 @@ function createCard() {
   newCardUtil.appendChild(deleteBtn);
   newCard.appendChild(task);
   taskContainer.appendChild(newCard);
+
+  const delBtn = document.querySelectorAll(".delete");
+  delBtn.forEach((e) => {
+    e.addEventListener("click", (event) => {
+      console.log(e.parentElement.closest(".card"));
+    });
+  });
 
   //add initial placeholder if it doesnt exist already
   if (!document.querySelector('div[class="next-card"]')) {
