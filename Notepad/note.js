@@ -3,10 +3,9 @@ const btn = document.querySelector(".input-add");
 const taskContainer = document.querySelector(".tasks");
 const cards = document.querySelectorAll('li[class="card"]');
 const taskInput = document.querySelector('input[type="text"]');
-let delBtns = []
+let delBtns = [];
 let cardId = 0;
 let itemId = 0;
-
 
 //adding placeholder for next card
 function addPlaceHolder() {
@@ -37,24 +36,28 @@ function createCard() {
   task.setAttribute("id", `i${itemId++}`);
 
   //deals with empty inputs
-  let todo = taskInput.value ? taskInput.value : "Nothing Specified...";
+  let todo = taskInput.value ? taskInput.value : "n";
+  if (todo === "n") {
+    return;
+  } else {
+    task.textContent = todo;
+    taskInput.value = "";
 
-  //creates a new card
-  task.textContent = todo;
-  newCard.appendChild(newCardUtil);
-  newCardUtil.appendChild(checkBox);
-  newCardUtil.appendChild(deleteBtn);
-  newCard.appendChild(task);
-  taskContainer.appendChild(newCard);
+    //creates a new card
+    newCard.appendChild(newCardUtil);
+    newCardUtil.appendChild(checkBox);
+    newCardUtil.appendChild(deleteBtn);
+    newCard.appendChild(task);
+    taskContainer.appendChild(newCard);
 
-  delBtns.push(newCard.querySelector('button[class="delete"]'))
-  
-  delBtns.forEach(b =>{
-    b.addEventListener('click', ()=>{
-      b.parentElement.parentElement.remove()
-    })
-  })
-  
+    delBtns.push(newCard.querySelector('button[class="delete"]'));
+
+    delBtns.forEach((b) => {
+      b.addEventListener("click", () => {
+        b.parentElement.parentElement.remove();
+      });
+    });
+  }
   //add initial placeholder if it doesnt exist already
   if (!document.querySelector('div[class="next-card"]')) {
     const placeHolder = document.createElement("div");
@@ -71,4 +74,3 @@ taskInput.addEventListener("keypress", (event) => {
     createCard();
   } else return;
 });
-
