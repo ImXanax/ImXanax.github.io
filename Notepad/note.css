@@ -171,7 +171,9 @@ p.item {
   padding-right: 8px;
   font-family: "Varela Round", sans-serif;
   font-size: 20px;
+  text-decoration: none;
 }
+
 .card-util {
   height: 100%;
   width: 75px;
@@ -201,7 +203,7 @@ input[type="checkbox"]::before {
   transition: 150ms transform ease-in-out;
   transform: scale(0);
 }
-input[type="checkbox"]:checked::before {
+input[type="checkbox"]:checked::before{
   display: block;
   margin: auto;
   background-color: rgba(4, 7, 16, 0.696);
