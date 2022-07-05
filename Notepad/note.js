@@ -3,9 +3,11 @@ const btn = document.querySelector(".input-add");
 const taskContainer = document.querySelector(".tasks");
 const cards = document.querySelectorAll('li[class="card"]');
 const taskInput = document.querySelector('input[type="text"]');
-
+let delBtns = []
 let cardId = 0;
 let itemId = 0;
+
+
 //adding placeholder for next card
 function addPlaceHolder() {
   //prevent overlapping element
@@ -45,13 +47,14 @@ function createCard() {
   newCard.appendChild(task);
   taskContainer.appendChild(newCard);
 
-  const delBtn = document.querySelectorAll(".delete");
-  delBtn.forEach((e) => {
-    e.addEventListener("click", (event) => {
-      console.log(e.parentElement.closest(".card"));
-    });
-  });
-
+  delBtns.push(newCard.querySelector('button[class="delete"]'))
+  
+  delBtns.forEach(b =>{
+    b.addEventListener('click', ()=>{
+      b.parentElement.parentElement.remove()
+    })
+  })
+  
   //add initial placeholder if it doesnt exist already
   if (!document.querySelector('div[class="next-card"]')) {
     const placeHolder = document.createElement("div");
@@ -68,3 +71,4 @@ taskInput.addEventListener("keypress", (event) => {
     createCard();
   } else return;
 });
+
