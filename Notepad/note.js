@@ -21,18 +21,23 @@ function addPlaceHolder() {
 
 //creating card
 function createCard() {
+
   //fetching required elements
   const newCard = document.createElement("li");
-  newCard.classList.add("card");
-  newCard.setAttribute(`id`, `c${cardId++}`);
   const newCardUtil = document.createElement("div");
-  newCardUtil.classList.add("card-util");
   const checkBox = document.createElement("input");
-  checkBox.setAttribute("type", "checkbox");
   const deleteBtn = document.createElement("button");
-  deleteBtn.classList.add("delete");
   const task = document.createElement("p");
+
+  //assign classes
+  newCard.classList.add("card");
+  newCardUtil.classList.add("card-util");
   task.classList.add("item");
+  deleteBtn.classList.add("delete");
+
+  //assign attr
+  newCard.setAttribute(`id`, `c${cardId++}`);
+  checkBox.setAttribute("type", "checkbox");
   task.setAttribute("id", `i${itemId++}`);
 
   //deals with empty inputs
