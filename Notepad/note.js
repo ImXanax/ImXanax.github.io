@@ -1,9 +1,11 @@
 const num = document.querySelectorAll('input[type="checkbox"]');
+const cards = document.querySelectorAll('li[class="card"]');
 const btn = document.querySelector(".input-add");
 const taskContainer = document.querySelector(".tasks");
-const cards = document.querySelectorAll('li[class="card"]');
 const taskInput = document.querySelector('input[type="text"]');
+
 let delBtns = [];
+let todos = [];
 let cardId = 0;
 let itemId = 0;
 
@@ -19,9 +21,10 @@ function addPlaceHolder() {
   taskContainer.appendChild(placeHolder);
 }
 
+
 //creating card
 function createCard() {
-
+  
   //fetching required elements
   const newCard = document.createElement("li");
   const newCardUtil = document.createElement("div");
@@ -41,13 +44,13 @@ function createCard() {
   task.setAttribute("id", `i${itemId++}`);
 
   //deals with empty inputs
-  let todo = taskInput.value ? taskInput.value : "n";
-  if (todo === "n") {
+  let item = taskInput.value ? taskInput.value : taskInput.value  ? '' : null;
+  if (item === null) {
     return;
   } else {
-    task.textContent = todo;
+    task.textContent = item;
     taskInput.value = "";
-
+    
     //creates a new card
     newCard.appendChild(newCardUtil);
     newCardUtil.appendChild(checkBox);
