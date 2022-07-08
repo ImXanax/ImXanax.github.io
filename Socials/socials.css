@@ -70,7 +70,7 @@ body {
   height: 150px;
   border-radius: 50%;
   position: absolute;
-  left: 85%;
+  left: 80%;
   top: 6%;
 }
 .bubble4 {
@@ -122,9 +122,6 @@ body {
 }
 .wrapper {
   margin-top: 20px;
-  max-width: 100%;
-  height: 100%;
-  width: 1500px;
   color: rgb(216, 212, 218);
   font-family: "Varela Round", sans-serif;
   background-color: rgba(13, 8, 34);
@@ -238,9 +235,14 @@ p.logo:hover {
   font-family: "Teko", sans-serif;
   font-size: 25px;
 }
-
-@media only screen and (max-width: 749px) {
-  .bubbles {
+#tw{
+  font-size: 18px;
+}
+@media only screen and (max-width: 480px) {
+  .bg-bubbles .bubble4{
+    display: none;
+  }
+  .bg-bubbles .bubble2{
     display: none;
   }
   .glass {

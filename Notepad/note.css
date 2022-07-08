@@ -341,6 +341,9 @@ input[type="checkbox"]:checked::before {
   background-color: var(--crd-hv2);
 }
 
+
+
+/* SCROLLBAR */
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -354,6 +357,7 @@ input[type="checkbox"]:checked::before {
   background-color:var(--scl-2);
 }
 
+/* MOBILE ADJUSTMENTS */
 @media screen and (max-width: 436px) {
   body {
     background-size: 300% 300%;
@@ -399,6 +403,8 @@ input[type="checkbox"]:checked::before {
     font-size: 35px;
   }
 }
+
+/* ANIMATION */
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
