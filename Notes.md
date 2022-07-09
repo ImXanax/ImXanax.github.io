@@ -4,6 +4,7 @@
 ## To-do
 - delete button functionality (note: probs dealing with assigning ids for each card)
 - add css or js for a compeleted task (strikethrough/grayed out)
+- compeleted/active/all pages
 
 ## BO
 - attempt to make it responsive
