@@ -16,6 +16,10 @@
   --crd-hv1:var(--crd-chk);
   --crd-hv2:var(--crd-del);
 
+  --chk-hv1:rgba(34, 199, 141, 0.9);
+  --chk-hv2:rgba(4, 7, 16, 0.696);
+  --del-hv1:rgba(0, 0, 0, 0.705);
+
   --scl-1:rgba(22, 41, 77, 0.847);
   --scl-2:rgb(40, 22, 121);
 
@@ -220,8 +224,7 @@ input[type="checkbox"] {
   box-shadow: 0px 2px 2px var(--box-sdw);
 }
 input[type="checkbox"]:hover {
-  background-color: var(--crd-hv1);
-  clip-path: polygon(20% 20%, 80% 20%, 80% 80%, 20% 80%);
+  background-color: var(--chk-hv1);
 }
 input[type="checkbox"]::before {
   content: "";
@@ -235,9 +238,9 @@ input[type="checkbox"]::before {
 input[type="checkbox"]:checked::before {
   display: block;
   margin: auto;
-  background-color: rgba(4, 7, 16, 0.696);
+  background-color: var(--chk-hv2);
   transform: scale(1);
-  clip-path: polygon(20% 20%, 80% 20%, 80% 80%, 20% 80%);
+  clip-path: polygon(10% 10%, 80% 10%, 80% 80%, 10% 80%);
 }
 .delete {
   height: 45px;
@@ -256,21 +259,8 @@ input[type="checkbox"]:checked::before {
   transform: scale(0);
 }
 .delete:hover::before {
-  background-color: rgb(48, 26, 103);
-  clip-path: polygon(
-    20% 0%,
-    0% 20%,
-    30% 50%,
-    0% 80%,
-    20% 100%,
-    50% 70%,
-    80% 100%,
-    100% 80%,
-    70% 50%,
-    100% 20%,
-    80% 0%,
-    50% 30%
-  );
+  background-color: var(--del-hv1);
+  clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
   transform: scale(1);
 }
 .next-card {
