@@ -13,13 +13,12 @@ body {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-  background-color: rgba(13, 8, 34);
+  background: linear-gradient(#141e30, #243b55);
 }
 .wrapper {
   margin-top: 20px;
   max-width: 100%;
   max-height: 100%;
-  background-color: rgba(13, 8, 34);
   width: 1500px;
   color: rgb(216, 212, 218);
   font-family: "Varela Round", sans-serif;
@@ -57,8 +56,9 @@ ul {
   z-index: 4;
   margin: 0;
   padding: 0;
+  border-radius: 10px;
   overflow: hidden;
-  background-color: hsl(256, 87%, 28%);
+  background-color: hsl(226, 76%, 44%);
 }
 li {
   float: left;
@@ -73,7 +73,7 @@ li a,
 }
 li a:hover,
 .dropdown:hover .dropdbtn {
-  background-color: rgba(13, 8, 34);
+  background-color: rgb(13, 16, 82);
 }
 li.dropdown {
   display: inline-block;
@@ -81,7 +81,7 @@ li.dropdown {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: rgb(97, 12, 209);
+  background-color: rgb(34, 115, 195);
   min-width: 100px;
   box-sizing: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
@@ -108,8 +108,8 @@ li.dropdown {
 }
 .typewriter h1 {
   height: auto;
-  padding: 10px;
-  width: 315px;
+  width: 385px;
+  padding: 0px;
   text-align: center;
   color: aliceblue;
   font-family: "Varela Round", sans-serif;
@@ -118,11 +118,12 @@ li.dropdown {
   letter-spacing: 0.15em;
   white-space: nowrap;
   margin: 0 auto;
-  animation: typing 3s steps(26, end), curs 0.3s step-end infinite alternate;
+  padding:10px;
+  animation: typing 2.5s steps(30, end), curs 0.3s step-end infinite alternate;
 }
 #typewriter-name{
   color: blueviolet;
-  text-shadow: 0px 8px black;
+  text-shadow: 0px 5px black;
 }
 
 @keyframes typing {

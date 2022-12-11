@@ -7,21 +7,21 @@
   --spr-clr: rgba(244, 233, 255, 0.658);
   --box-sdw: rgba(0, 0, 0, 0.582);
   --fnt-clr: rgb(240, 248, 255);
-  --icn-hvr:rgba(99, 36, 176, 0.228);
-  --icn-brd:rgb(252, 252, 252);
+  --icn-hvr: rgba(99, 36, 176, 0.228);
+  --icn-brd: rgb(252, 252, 252);
 
   --crd-pri: rgb(97 130 252 / 11%);
   --crd-chk: rgb(43, 70, 125);
   --crd-del: rgb(201 9 75);
-  --crd-hv1:var(--crd-chk);
-  --crd-hv2:var(--crd-del);
+  --crd-hv1: var(--crd-chk);
+  --crd-hv2: var(--crd-del);
 
-  --chk-hv1:rgba(34, 199, 141, 0.9);
-  --chk-hv2:rgba(4, 7, 16, 0.696);
-  --del-hv1:rgba(0, 0, 0, 0.705);
+  --chk-hv1: rgba(34, 199, 141, 0.9);
+  --chk-hv2: rgba(4, 7, 16, 0.696);
+  --del-hv1: rgba(0, 0, 0, 0.705);
 
-  --scl-1:rgba(22, 41, 77, 0.847);
-  --scl-2:rgb(40, 22, 121);
+  --scl-1: rgba(22, 41, 77, 0.847);
+  --scl-2: rgb(40, 22, 121);
 
   --gri-1: rgb(200 9 54);
   --gri-2: rgb(52 23 123);
@@ -163,6 +163,40 @@ body {
   height: 100%;
   /* background-color: #5e18c73a; */
 }
+.app-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+}
+.app-info #all {
+  display: flex;
+  border-style: none;
+  height: 10px;
+  width: 10px;
+  background-color: rgb(187, 101, 223);
+  border-radius: 50%;
+  margin: 2px;
+}
+.app-info #active {
+  display: flex;
+  border-style: none;
+  height: 10px;
+  width: 10px;
+  background-color: rgb(94, 203, 136);
+  border-radius: 50%;
+  margin: 2px;
+}
+.app-info #done {
+  display: flex;
+  border-style: none;
+  height: 10px;
+  width: 10px;
+  background-color: rgb(213, 52, 41);
+  border-radius: 50%;
+  margin: 2px;
+}
 .tasks {
   display: flex;
   flex-direction: row;
@@ -260,7 +294,18 @@ input[type="checkbox"]:checked::before {
 }
 .delete:hover::before {
   background-color: var(--del-hv1);
-  clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
+  clip-path: polygon(
+    0% 0%,
+    0% 100%,
+    25% 100%,
+    25% 25%,
+    75% 25%,
+    75% 75%,
+    25% 75%,
+    25% 100%,
+    100% 100%,
+    100% 0%
+  );
   transform: scale(1);
 }
 .next-card {
@@ -331,8 +376,6 @@ input[type="checkbox"]:checked::before {
   background-color: var(--crd-hv2);
 }
 
-
-
 /* SCROLLBAR */
 ::-webkit-scrollbar {
   width: 5px;
@@ -344,7 +387,7 @@ input[type="checkbox"]:checked::before {
   background-color: var(--scl-1);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-color:var(--scl-2);
+  background-color: var(--scl-2);
 }
 
 /* MOBILE ADJUSTMENTS */

@@ -1,13 +1,44 @@
 const num = document.querySelectorAll('input[type="checkbox"]');
-const cards = document.querySelectorAll('li[class="card"]');
 const btn = document.querySelector(".input-add");
 const taskContainer = document.querySelector(".tasks");
 const taskInput = document.querySelector('input[type="text"]');
 
+let currentTodo = {};
 let delBtns = [];
-let todos = [];
-let cardId = 0;
-let itemId = 0;
+// let todos = [];
+let itemText = "";
+let cardId = Math.floor(Math.random(1) * 1000);
+let itemId = Math.floor(Math.random(1) * 1000);
+
+document.addEventListener("DOMContentLoaded", main);
+
+function main() {
+  iniCards();
+  document.querySelector(".tasks").addEventListener("dragover", function (e) {
+    e.preventDefault();
+    if (
+      !e.target.classList.contains("dragging") &&
+      e.target.classList.contains("card")
+    ) {
+      const draggingCard = document.querySelector(".dragging");
+      const cards = [...this.querySelectorAll(".card")];
+      const currPos = cards.indexOf(draggingCard);
+      const newPos = cards.indexOf(e.target);
+      console.log(currPos, newPos);
+      if (currPos > newPos) {
+        this.insertBefore(draggingCard, e.target);
+      } else {
+        this.insertBefore(draggingCard, e.target.nextSibling);
+      }
+      const todos = JSON.parse(localStorage.getItem("todos"));
+      const removed = todos.splice(currPos, 1);
+      todos.splice(newPos, 0, removed[0]);
+      localStorage.setItem("todos", JSON.stringify(todos));
+    }
+  });
+}
+
+function iniCards() {}
 
 //adding placeholder for next card
 function addPlaceHolder() {
@@ -20,11 +51,9 @@ function addPlaceHolder() {
   placeHolder.classList.add("next-card");
   taskContainer.appendChild(placeHolder);
 }
-
-
 //creating card
-function createCard() {
-  
+function createNewCard(element) {
+  if (taskInput.value === null) return;
   //fetching required elements
   const newCard = document.createElement("li");
   const newCardUtil = document.createElement("div");
@@ -39,33 +68,43 @@ function createCard() {
   deleteBtn.classList.add("delete");
 
   //assign attr
-  newCard.setAttribute(`id`, `c${cardId++}`);
+  newCard.setAttribute(`id`, `${cardId++}`);
   checkBox.setAttribute("type", "checkbox");
-  task.setAttribute("id", `i${itemId++}`);
+  task.setAttribute("id", `${itemId++}`);
 
   //deals with empty inputs
-  let item = taskInput.value ? taskInput.value : taskInput.value  ? '' : null;
-  if (item === null) {
-    return;
-  } else {
-    task.textContent = item;
-    taskInput.value = "";
-    
-    //creates a new card
-    newCard.appendChild(newCardUtil);
-    newCardUtil.appendChild(checkBox);
-    newCardUtil.appendChild(deleteBtn);
-    newCard.appendChild(task);
-    taskContainer.appendChild(newCard);
+  // if (element.itemText) itemText = element.itemText;
+  // else if (taskInput.value) itemText = taskInput.value;
+  //itemText = element.itemText ? element.itemText : element.itemText ? null : taskInput.value ? taskInput.value : taskInput.value ? "" : null ;
+  // else {
+  currentTodo = {
+    itemText,
+  };
+  todos.push(currentTodo);
+  //console.log(todos);
+  localStorage.setItem("todo", JSON.stringify(todos));
+  //console.log(localStorage.getItem("todo"));
 
-    delBtns.push(newCard.querySelector('button[class="delete"]'));
+  task.textContent = itemText;
+  taskInput.value = "";
 
-    delBtns.forEach((b) => {
-      b.addEventListener("click", () => {
-        b.parentElement.parentElement.remove();
-      });
+  //creates a new card
+  newCard.appendChild(newCardUtil);
+  newCardUtil.appendChild(checkBox);
+  newCardUtil.appendChild(deleteBtn);
+  newCard.appendChild(task);
+  taskContainer.appendChild(newCard);
+
+  delBtns.push(newCard.querySelector('button[class="delete"]'));
+
+  //event for delete
+  delBtns.forEach((b) => {
+    b.addEventListener("click", (e) => {
+      b.parentElement.parentElement.remove();
     });
-  }
+  });
+  // }
+
   //add initial placeholder if it doesnt exist already
   if (!document.querySelector('div[class="next-card"]')) {
     const placeHolder = document.createElement("div");
@@ -76,9 +115,14 @@ function createCard() {
   }
 }
 
+// Add button event listener
+btn.addEventListener("click", (event) => {
+  createNewCard();
+});
+
 //Accept 'Enter' as alternative to add tasks
 taskInput.addEventListener("keypress", (event) => {
   if (event.key === "Enter") {
-    createCard();
+    createNewCard();
   } else return;
 });
