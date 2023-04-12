@@ -13,7 +13,8 @@ body {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-  background: linear-gradient(#410365, #11064b);
+  background-image: url(/Vartech/images/circuit-board.svg);
+  background-color: black;
 }
 .wrapper {
   margin-top: 20px;
@@ -40,8 +41,8 @@ p.logo {
   transition: opacity 500ms;
   z-index: 3;
 }
-p.logo:hover {
-  opacity: 0;
+p.logo:hover::after {
+  content: ">|<";
 }
 .nav-bar {
   height: auto;
@@ -49,7 +50,7 @@ p.logo:hover {
   display: flex;
   justify-content: center;
   border-radius: 10px;
-  box-shadow: 0px 13px 50px -10px #000000 ;
+  box-shadow: 0px 13px 50px -10px #000000;
   margin-bottom: 30px;
 }
 ul {
@@ -106,36 +107,6 @@ li.dropdown {
   align-items: center;
   text-align: center;
   font-family: "Varela Round", sans-serif;
-}
-.typewriter h1 {
-  height: auto;
-  width: 385px;
-  padding: 0px;
-  text-align: center;
-  color: aliceblue;
-  font-family: "Varela Round", sans-serif;
-  overflow: hidden;
-  border-right: 0.1em solid rgb(223, 217, 255);
-  letter-spacing: 0.15em;
-  white-space: nowrap;
-  margin: 0 auto;
-  padding:10px;
-  animation: typing 2.5s steps(30, end), curs 0.3s step-end infinite alternate;
-}
-#typewriter-name{
-  color: rgb(36, 114, 216);
-  text-shadow: 0px 5px black;
-}
-
-@keyframes typing {
-  from {
-    width: 0%;
-  }
-}
-@keyframes curs {
-  50% {
-    border-color: transparent;
-  }
 }
 @media only screen and (max-width: 749px) {
 }
