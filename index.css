@@ -13,7 +13,7 @@ body {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-  background-image: url(/Vartech/images/circuit-board.svg);
+  background-image: url("/Varfig/images/circuit-board.svg");
   background-color: black;
 }
 .wrapper {
