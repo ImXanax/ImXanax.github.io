@@ -4,36 +4,554 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="/style/index.css" />
+    <link rel="stylesheet" href="/style/slider.css" />
+    <link rel="stylesheet" href="/style/home.css" />
+    <link rel="stylesheet" href="/style/skills.css" />
+    <link rel="stylesheet" href="/style/projects.css" />
+    <link rel="stylesheet" href="/style/contact.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico?" />
+    <script defer src="/js/index.js"></script>
+    <script defer src="/js/slider.js"></script>
+
     <title>-l||l-</title>
   </head>
   <body>
-    <div class="wrapper">
-      <div class="header">
-        <p class="logo">-l||l-</p>
-        <!-- Navigation -->
-        <nav class="nav-bar">
-          <ul>
-            <li><a href="/Socials/socials.html">SOCIALS</a></li>
-            <li class="dropdown">
-              <a class="dropd-btn" href="#">GAMES</a>
-              <div class="dropdown-content">
-                <a href="Games/RPC/rpc.html">RPC</a>
-                <a href="Games/PT/pt.html">PAIR TWO</a>
-                <a href="Games/WM/wm.html">BONK</a>
-                <a href="Games/BO/bo.html">BREAKOUT</a>
-                <a href="Games/KO/KO.html">KNOCKOUT</a>
-              </div>
-            </li>
-            <li><a href="/Notepad/note.html">NOTEPAD</a></li>
-            <li>
-              <a href="/Varfig/varfig.html">VARTECH</a>
-            </li>
-          </ul>
-        </nav>
+    <nav>
+      <h1 class="logo">-l||l-</h1>
+
+      <div class="border-container">
+        <img src="/images/svgs/1.svg" alt="" />
+        <img src="/images/svgs/2.svg" alt="" />
+        <img src="/images/svgs/3.svg" alt="" />
+        <img src="/images/svgs/3.svg" alt="" />
+        <img src="/images/svgs/44.svg" alt="" />
+        <img src="/images/svgs/44.svg" alt="" />
       </div>
+      <a href="#" class="nav-btn" onclick="hamburger()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <ul class="nav-main">
+        <li onclick="document.querySelector('.container').scrollIntoView();">
+          HOME
+        </li>
+        <li onclick="document.querySelector('.skills').scrollIntoView();">
+          SKILLS
+        </li>
+        <li onclick="document.querySelector('.projects').scrollIntoView();">
+          PROJECTS
+        </li>
+        <li onclick="document.querySelector('.contact').scrollIntoView();">
+          CONTACT
+        </li>
+      </ul>
+      <ul class="nav-dropdown">
+        <li
+          onclick="document.querySelector('.container').scrollIntoView(); hamburger()"
+        >
+          HOME
+        </li>
+        <li
+          onclick="document.querySelector('.skills').scrollIntoView(); hamburger()"
+        >
+          SKILLS
+        </li>
+        <li
+          onclick="document.querySelector('.projects').scrollIntoView(); hamburger()"
+        >
+          PROJECTS
+        </li>
+        <li
+          onclick="document.querySelector('.contact').scrollIntoView(); hamburger()"
+        >
+          CONTACT
+        </li>
+      </ul>
+    </nav>
+    <div class="wrapper">
+      <div class="decal">
+        <div class="box hidden"></div>
+        <div class="box hidden"></div>
+        <div class="box hidden"></div>
+        <div class="box hidden"></div>
+        <p class="page hidden">1/4</p>
+        <p class="name"></p>
+      </div>
+      <section class="container" data-page="1">
+        <img src="/images/xanbot1.png" alt="" />
+        <div class="balls ball-1"></div>
+        <div class="balls ball-2"></div>
+        <!-- <img id="blob" src="/images/n.jpg" alt="bkgd" /> -->
+      </section>
+      <section class="skills" data-page="2">
+        <div class="balls ball-3"></div>
+        <div class="balls ball-4"></div>
+        <h1 class="hidden">BEGINNER</h1>
+        <div class="circular-slider">
+          <div class="card">
+            <div class="content hidden">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg"
+                style="background-color: #e9eaec"
+              />
+            </div>
+          </div>
+          <div class="card">
+            <div class="content hidden">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg"
+                style="background-color: #e9eaec"
+              />
+            </div>
+          </div>
+          <div class="card">
+            <div class="content hidden">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg"
+                style="background-color: #e9eaec"
+              />
+            </div>
+          </div>
+          <div class="card">
+            <div class="content hidden">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                style="background-color: #0d1a3b"
+              />
+            </div>
+          </div>
+          <div class="card">
+            <div class="content hidden">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
+                style="background-color: #171f3e"
+              />
+            </div>
+          </div>
+          <div class="card">
+            <div class="content hidden">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg"
+                style="background-color: #f3f1f1"
+              />
+            </div>
+          </div>
+        </div>
+        <h1 class="hidden">INTERMEDIATE</h1>
+        <div class="circular-slider">
+          <div class="card">
+            <div class="content hidden">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+                style="background-color: #9c033a"
+              />
+            </div>
+          </div>
+          <div class="card">
+            <div class="content hidden">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
+                style="background-color: #68217a"
+              />
+            </div>
+          </div>
+          <div class="card">
+            <div class="content hidden">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                style="background-color: #080608"
+              />
+            </div>
+          </div>
+          <div class="card">
+            <div class="content hidden">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                style="background-color: #fcf6fc"
+              />
+            </div>
+          </div>
+          <div class="card">
+            <div class="content hidden">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                style="background-color: #1e2b34"
+              />
+            </div>
+          </div>
+          <div class="card">
+            <div class="content hidden">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                style="background-color: #141b24"
+              />
+            </div>
+          </div>
+          <div class="card">
+            <div class="content hidden">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                style="background-color: #dee8ea"
+              />
+            </div>
+          </div>
+        </div>
+        <h1 class="hidden">PROFICIENT</h1>
+        <div class="circular-slider">
+          <div class="card">
+            <div class="content hidden">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg"
+                style="background-color: rgb(36, 36, 65)"
+              />
+            </div>
+          </div>
+          <div class="card">
+            <div class="content hidden">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg"
+              />
+            </div>
+          </div>
+          <div class="card">
+            <div class="content hidden">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg"
+              />
+            </div>
+          </div>
+          <div class="card">
+            <div class="content hidden">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                style="background-color: #ffffff"
+              />
+            </div>
+          </div>
+          <div class="card">
+            <div class="content hidden">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"
+              />
+            </div>
+          </div>
+          <div class="card">
+            <div class="content hidden">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                style="background-color: rgb(202, 85, 46)"
+              />
+            </div>
+          </div>
+          <div class="card">
+            <div class="content hidden">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                style="background-color: rgb(42, 114, 228)"
+              />
+            </div>
+          </div>
+          <div class="card">
+            <div class="content hidden">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                style="background-color: rgb(220, 217, 216)"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="projects" data-page="3">
+        <div class="project-container">
+          <button class="project-btn project-btn-left">&#10094;</button>
+          <div class="project-track">
+            <div class="app current-app">
+              <div class="app-header">
+                <div class="app-header-circles"></div>
+                <div class="app-header-seperator"></div>
+                <div class="app-header-title">VARFIG</div>
+                <div class="app-header-icons">
+                  <div class="mini">─</div>
+                  <div class="maxi">▢</div>
+                  <div class="close">X</div>
+                </div>
+              </div>
+              <div class="app-body">
+                <img src="images/varfig.png" alt="" />
+                <div class="app-descr">
+                  <p class="app-descr-title">Computer Configurator</p>
+                  <p class="app-descr-summary">
+                    A windows app designed for listing computer components with
+                    their prices to customers
+                  </p>
+                  <a href="https://github.com/ImXanax/Varfig"
+                    ><img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                      alt="github icon"
+                      style="background-color: #fafafa; border-radius: 50%"
+                  /></a>
+                </div>
+              </div>
+            </div>
+            <div class="app">
+              <div class="app-header">
+                <div class="app-header-circles"></div>
+                <div class="app-header-seperator"></div>
+                <div class="app-header-title">VARTECH</div>
+                <div class="app-header-icons">
+                  <div class="mini">─</div>
+                  <div class="maxi">▢</div>
+                  <div class="close">X</div>
+                </div>
+              </div>
+              <div class="app-body">
+                <img src="images/vartech.png" alt="" />
+                <div class="app-descr">
+                  <p class="app-descr-title">Full-stack Website</p>
+                  <p class="app-descr-summary">
+                    Website for a computer service and repair shop
+                  </p>
+                  <a href="https://github.com/ImXanax/Vartech"
+                    ><img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                      alt="github icon"
+                      style="background-color: #fafafa; border-radius: 50%"
+                  /></a>
+                </div>
+              </div>
+            </div>
+            <div class="app">
+              <div class="app-header">
+                <div class="app-header-circles"></div>
+                <div class="app-header-seperator"></div>
+                <div class="app-header-title">VIOLET</div>
+                <div class="app-header-icons">
+                  <div class="mini">─</div>
+                  <div class="maxi">▢</div>
+                  <div class="close">X</div>
+                </div>
+              </div>
+              <div class="app-body">
+                <img src="images/violet.png" alt="" />
+                <div class="app-descr">
+                  <p class="app-descr-title">Discord Bot</p>
+                  <p class="app-descr-summary">
+                    A discord bot intended for a private server
+                  </p>
+                  <a href=""
+                    ><img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                      alt="github icon"
+                      style="background-color: #fafafa; border-radius: 50%"
+                  /></a>
+                </div>
+              </div>
+            </div>
+            <div class="app">
+              <div class="app-header">
+                <div class="app-header-circles"></div>
+                <div class="app-header-seperator"></div>
+                <div class="app-header-title">XANPASS</div>
+                <div class="app-header-icons">
+                  <div class="mini">─</div>
+                  <div class="maxi">▢</div>
+                  <div class="close">X</div>
+                </div>
+              </div>
+              <div class="app-body">
+                <img src="images/xanpass.png" alt="" />
+                <div class="app-descr">
+                  <p class="app-descr-title">Browser Extension</p>
+                  <p class="app-descr-summary">
+                    A password generating extension with customizable options
+                  </p>
+                  <a href="https://github.com/ImXanax/Xanpass"
+                    ><img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                      alt="github icon"
+                      style="background-color: #fafafa; border-radius: 50%"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="project-btn project-btn-right">&#10095;</button>
+        </div>
+      </section>
+      <section class="contact" data-page="4">
+        <div class="contacts-container">
+          <div class="ctc">
+            <div class="ctc-header">
+              <div class="ctc-icon">
+                <div class="ctc-circle"></div>
+                <div class="ctc-circle"></div>
+                <div class="ctc-circle"></div>
+              </div>
+            </div>
+            <div class="ctc-body">
+              <div class="balls ball-5"></div>
+              <a href="https://discord.com/invite/twentyonepilots">
+                <div class="ctc-content">
+                  <img src="images/icons/Discord-1.png"/>
+                  <div class="ctc-info">
+                    <h2>DISCORD</h1>
+                    <h3>@imxanax</h2>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="ctc">
+            <div class="ctc-header">
+              <div class="ctc-icon">
+                <div class="ctc-circle"></div>
+                <div class="ctc-circle"></div>
+                <div class="ctc-circle"></div>
+              </div>
+            </div>
+            <div class="ctc-body">
+              <div class="balls ball-6"></div>
+              <a href="https://twitter.com/lmxanax">
+                <div class="ctc-content">
+                  <img src="images/icons/Twitter-1.png"/>
+                  <div class="ctc-info">
+                    <h2>TWITTER</h1>
+                    <h3>@lmxanax</h2>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="ctc">
+            <div class="ctc-header">
+              <div class="ctc-icon">
+                <div class="ctc-circle"></div>
+                <div class="ctc-circle"></div>
+                <div class="ctc-circle"></div>
+              </div>
+            </div>
+            <div class="ctc-body">
+              <div class="balls ball-7"></div>
+              <a href="https://www.instagram.com/lmxanax/">
+                <div class="ctc-content">
+                  <img src="images/icons/Instagram-1.png"/>
+                  <div class="ctc-info">
+                    <h2>INSTAGRAM</h1>
+                    <h3>@lmxanax</h2>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="ctc">
+            <div class="ctc-header">
+              <div class="ctc-icon">
+                <div class="ctc-circle"></div>
+                <div class="ctc-circle"></div>
+                <div class="ctc-circle"></div>
+              </div>
+            </div>
+            <div class="ctc-body">
+              <div class="balls ball-8"></div>
+              <a href="https://www.pinterest.com/lmxanax/">
+                <div class="ctc-content">
+                  <img src="images/icons/Pinterest-1.png"/>
+                  <div class="ctc-info">
+                    <h2>PINTEREST</h1>
+                    <h3>@lmxanax</h2>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="ctc">
+            <div class="ctc-header">
+              <div class="ctc-icon">
+                <div class="ctc-circle"></div>
+                <div class="ctc-circle"></div>
+                <div class="ctc-circle"></div>
+              </div>
+            </div>
+            <div class="ctc-body">
+              <div class="balls ball-9"></div>
+              <a href="https://open.spotify.com/user/q5cogcvz190sjtutx25q0s4kx?si=8d436672d86242dd">
+                <div class="ctc-content">
+                  <img src="images/icons/Spotify-1.png"/>
+                  <div class="ctc-info">
+                    <h2>SPOTIFY</h1>
+                    <h3>@lmxanax</h2>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="ctc">
+            <div class="ctc-header">
+              <div class="ctc-icon">
+                <div class="ctc-circle"></div>
+                <div class="ctc-circle"></div>
+                <div class="ctc-circle"></div>
+              </div>
+            </div>
+            <div class="ctc-body">
+              <div class="balls ball-10"></div>
+              <a href="https://www.linkedin.com/in/meraj-h/">
+                <div class="ctc-content">
+                  <img src="images/icons/LinkedIn-1.png"/>
+                  <div class="ctc-info">
+                    <h2>LINKEDIN</h1>
+                    <h3>@meraj-h</h2>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="ctc">
+            <div class="ctc-header">
+              <div class="ctc-icon">
+                <div class="ctc-circle"></div>
+                <div class="ctc-circle"></div>
+                <div class="ctc-circle"></div>
+              </div>
+            </div>
+            <div class="ctc-body">
+              <div class="balls ball-11"></div>
+              <a href="https://t.me/lmxanax">
+                <div class="ctc-content">
+                  <img src="images/icons/Telegram-1.png"/>
+                  <div class="ctc-info">
+                    <h2>TELEGRAM</h1>
+                    <h3>@lmxanax</h2>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="ctc">
+            <div class="ctc-header">
+              <div class="ctc-icon">
+                <div class="ctc-circle"></div>
+                <div class="ctc-circle"></div>
+                <div class="ctc-circle"></div>
+              </div>
+            </div>
+            <div class="ctc-body">
+              <div class="balls ball-12"></div>
+              <a href="https://github.com/ImXanax">
+                <div class="ctc-content">
+                  <img id="git-img" src="images/icons/github.webp"/>
+                  <div id="git-info" class="ctc-info">
+                    <h2>GITHUB</h1>
+                    <h3>@imxanax</h2>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-    <script src="index.js"></script>
   </body>
 </html>

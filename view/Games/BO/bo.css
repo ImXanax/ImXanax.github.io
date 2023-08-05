@@ -1,0 +1,158 @@
+html,
+body {
+  color: whitesmoke;
+  text-align: center;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+
+  font-family: "Varela Round", sans-serif;
+}
+.wrapper {
+  position: absolute;
+  background-color: rgba(10, 10, 69);
+  height: 100%;
+  width: 100%;
+}
+.container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  filter: blur(100px);
+  background-color: rgba(10, 10, 69, 0.87);
+  z-index: 1;
+}
+.guide-popup {
+  position: absolute;
+
+  box-shadow: 0px 7px #03002591;
+  width: 250px;
+  height: 100px;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, 0);
+  padding: 30px;
+  border-radius: 5%;
+  background-color: hsla(268, 94%, 28%, 0.696);
+  z-index: 2;
+}
+.close {
+  position: absolute;
+  cursor: pointer;
+  left: 95%;
+  top: -5%;
+  height: 24px;
+  border-radius: 50%;
+  width: 24px;
+  color: aliceblue;
+  background-color: rgb(24, 65, 112);
+  box-shadow: 0px 3px #03002591;
+  border: none;
+}
+.close button {
+  text-decoration: none;
+}
+.guide-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.guide-controls {
+  font-weight: bold;
+}
+#guide-controls-color {
+  color: rgb(39, 106, 251);
+}
+.border {
+  position: absolute;
+  width: 560px;
+  height: 300px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border: solid rgb(255, 255, 255) 2px;
+}
+.block {
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  background-color: rgb(59, 7, 203);
+  box-shadow: 0px 10px #130425;
+}
+.player {
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  background-color: rgb(18, 163, 139);
+}
+.ball {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: white;
+}
+.score {
+  color: rgb(4, 177, 148);
+}
+.score-section {
+  margin: 20px;
+}
+#refresh {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: rgb(179, 54, 54);
+  font-size: 20px;
+}
+.start-btn {
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.start-btn button {
+  border: none;
+  margin: 10px;
+  top: 0;
+  font-size: 26px;
+  font-family: "Varela Round", sans-serif;
+  font-weight: bold;
+  padding: 16px 16px;
+  color: white;
+  background-color: rgb(17, 5, 119);
+  border-radius: 10px;
+  outline: none;
+  text-decoration: none;
+  box-shadow: 0 8px 0px #030025;
+  transition: all 0.2s;
+}
+.start-btn button:active {
+  top: 80%;
+  box-shadow: 0 2px 0px #000000;
+  transition: all 0.2s;
+}
+.direction-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.direction-btn button {
+  border: none;
+  margin: 10px;
+  top: 0;
+  font-size: 26px;
+  font-family: "Varela Round", sans-serif;
+  font-weight: bold;
+  padding: 16px 30px;
+  color: white;
+  background-color: rgb(72, 10, 172);
+  border-radius: 10px;
+  outline: none;
+  text-decoration: none;
+  box-shadow: 0 8px 0px #040318;
+  transition: all 0.2s;
+}
