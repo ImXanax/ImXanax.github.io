@@ -1,3 +1,8 @@
+window.addEventListener('load', function() {
+  const loadingScreen = document.querySelector('.loader-container');
+  loadingScreen.style.display = 'none';
+});
+
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -175,3 +180,4 @@ prevBtn.addEventListener("click", () => {
 
 allApps.forEach(setAppWidth);
 manageBtnDisplay();
+
