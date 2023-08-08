@@ -1,10 +1,5 @@
 # Description
-Personal test website that contains a portal to my socials
-plus it includes game dev and practice
-
-Link --> [-l||l-](https://imxanax.github.io/)
-
-![](/images/preview.png)
+Profolio [Website](https://imxanax.github.io/) highlighting skills and projects i work on also includes coding experiments and game development.
 
 # Games
 - [Rock Paper Scissors](https://imxanax.github.io/Games/RPC/rpc.html)
@@ -13,14 +8,15 @@ Link --> [-l||l-](https://imxanax.github.io/)
 - [Break Out](https://imxanax.github.io/Games/BO/bo.html)
 - [Knock Out - 2 Player](https://imxanax.github.io/Games/KO/KO.html)
 
-# Socials
-- [Instagram](https://www.instagram.com/lmxanax/)
-- [Twitter](https://twitter.com/lmxanax)
-- [Discord](https://discord.gg/E3wrKUDpz8)
-- [Linkedin](https://www.linkedin.com/in/meraj-h/)
-- [Pinterest](https://www.pinterest.com/lmxanax/)
-- [Github](https://github.com/ImXanax)
-- [Spotify](https://open.spotify.com/user/q5cogcvz190sjtutx25q0s4kx?si=8d436672d86242dd)
+## Preview
+- Home
+![](/images/preview/preview1.png)
+- Skills
 
-# Notepad
-![](/images/preview2.png)
+![](/images/preview/preview2.png)
+
+- Projects
+![](/images/preview/preview3.png)
+
+- Socials
+![](/images/preview/preview4.png)
