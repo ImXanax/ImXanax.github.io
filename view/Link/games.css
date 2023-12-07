@@ -1,0 +1,132 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: rgba(13, 8, 34);
+}
+.bg-bubbles {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+.bubble1 {
+  background: linear-gradient(
+    163deg,
+    rgb(135, 93, 252) 0%,
+    rgb(106, 133, 231),
+    rgb(121, 4, 111) 100%
+  );
+  filter: blur(100px);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  position: absolute;
+  left: 40%;
+  top: 20%;
+}
+.bubble2 {
+  background: linear-gradient(
+    163deg,
+    rgba(10, 192, 226, 1) 0%,
+    rgba(231, 106, 213, 1) 50%,
+    rgba(255, 224, 100, 1) 100%
+  );
+  filter: blur(100px);
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  position: absolute;
+  left: 78%;
+  top: 46%;
+}
+.bubble3 {
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  filter: blur(100px);
+  width: 410px;
+  height: 410px;
+  border-radius: 50%;
+  position: absolute;
+  left: -6%;
+  top: 60%;
+}
+.wrapper {
+  margin-top: 20px;
+  color: rgb(216, 212, 218);
+  font-family: "Varela Round", sans-serif;
+  background-color: rgba(13, 8, 34);
+  z-index: 2;
+}
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.box {
+  height: 300px;
+  width: 350px;
+  background-color: hsla(0, 0%, 0%, 0.47);
+  backdrop-filter: blur(10px);
+  margin: 1% 1% 1% 1%;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  z-index: 3;
+}
+
+.box a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.content {
+  height: 100%;
+  width: 100%;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  text-shadow: rgba(0, 0, 0, 0.397) 0px 5px 9px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.content-img img {
+  height: 95px;
+  width: 95px;
+  box-shadow: rgba(0, 0, 0, 0.705) 0px 5px 15px;
+  border-radius: 4px;
+}
+@media only screen and (max-width: 480px) {
+  .bg-bubbles .bubble4{
+    display: none;
+  }
+  .bg-bubbles .bubble2{
+    display: none;
+  }
+  .glass {
+    background-color: rgba(13, 8, 34);
+  }
+  .box{
+    margin-top: 3%;
+  }
+}

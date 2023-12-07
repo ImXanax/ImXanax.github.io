@@ -2,7 +2,7 @@ const canvas = document.querySelector("canvas");
 const c = canvas.getContext("2d");
 const bgAudio = new Audio("asset/audio/AncestorSpirit.mp3");
 const slashAudio = new Audio("asset/audio/slash.wav");
-const sound = document.getElementById('audio').src = "/Games/KO/asset/soundon.png"
+const sound = document.getElementById('audio').src = "./asset/soundon.png"
 
 
 canvas.width = 1024;
@@ -16,7 +16,7 @@ const bg = new Sprite({
     x: 0,
     y: 0,
   },
-  imageSrc: "/Games/KO/asset/background.png",
+  imageSrc: "./asset/background.png",
 });
 
 const shop = new Sprite({
@@ -24,7 +24,7 @@ const shop = new Sprite({
     x: 600,
     y: 128,
   },
-  imageSrc: "/Games/KO/asset/shop.png",
+  imageSrc: "./asset/shop.png",
   scale: 2.75,
   frame: 6,
 });
@@ -43,7 +43,7 @@ const player = new Players({
     x: 0,
     y: 0,
   },
-  imageSrc: "/Games/KO/asset/samurai/Idle.png",
+  imageSrc: "./asset/samurai/Idle.png",
   frame: 8,
   scale: 2.5,
   offset: {
@@ -52,31 +52,31 @@ const player = new Players({
   },
   sprites: {
     idle: {
-      imageSrc: "/Games/KO/asset/samurai/Idle.png",
+      imageSrc: "./asset/samurai/Idle.png",
       frame: 8,
     },
     run: {
-      imageSrc: "/Games/KO/asset/samurai/Run.png",
+      imageSrc: "./asset/samurai/Run.png",
       frame: 8,
     },
     jump: {
-      imageSrc: "/Games/KO/asset/samurai/Jump.png",
+      imageSrc: "./asset/samurai/Jump.png",
       frame: 2,
     },
     fall: {
-      imageSrc: "/Games/KO/asset/samurai/Fall.png",
+      imageSrc: "./asset/samurai/Fall.png",
       frame: 2,
     },
     attack1: {
-      imageSrc: "/Games/KO/asset/samurai/Attack1.png",
+      imageSrc: "./asset/samurai/Attack1.png",
       frame: 6,
     },
     takeHit: {
-      imageSrc: "/Games/KO/asset/samurai/Take Hit - white silhouette.png",
+      imageSrc: "./asset/samurai/Take Hit - white silhouette.png",
       frame: 4,
     },
     death: {
-      imageSrc: "/Games/KO/asset/samurai/Death.png",
+      imageSrc: "./asset/samurai/Death.png",
       frame: 6,
     },
   },
@@ -104,7 +104,7 @@ const enemy = new Players({
     x: -50,
     y: 0,
   },
-  imageSrc: "/Games/KO/asset/kenji/Idle.png",
+  imageSrc: "./asset/kenji/Idle.png",
   frame: 4,
   scale: 2.5,
   offset: {
@@ -113,31 +113,31 @@ const enemy = new Players({
   },
   sprites: {
     idle: {
-      imageSrc: "/Games/KO/asset/kenji/Idle.png",
+      imageSrc: "./asset/kenji/Idle.png",
       frame: 4,
     },
     run: {
-      imageSrc: "/Games/KO/asset/kenji/Run.png",
+      imageSrc: "./asset/kenji/Run.png",
       frame: 8,
     },
     jump: {
-      imageSrc: "/Games/KO/asset/kenji/Jump.png",
+      imageSrc: "./asset/kenji/Jump.png",
       frame: 2,
     },
     fall: {
-      imageSrc: "/Games/KO/asset/kenji/Fall.png",
+      imageSrc: "./asset/kenji/Fall.png",
       frame: 2,
     },
     attack1: {
-      imageSrc: "/Games/KO/asset/kenji/Attack1.png",
+      imageSrc: "./asset/kenji/Attack1.png",
       frame: 4,
     },
     takeHit: {
-      imageSrc: "/Games/KO/asset/kenji/Take hit.png",
+      imageSrc: "./asset/kenji/Take hit.png",
       frame: 3,
     },
     death: {
-      imageSrc: "/Games/KO/asset/kenji/Death.png",
+      imageSrc: "./asset/kenji/Death.png",
       frame: 7,
     },
   },
@@ -348,10 +348,10 @@ function audio() {
 
 function soundSetting(e) {
   if(e.src.endsWith('soundon.png')){
-    e.src = "/Games/KO/asset/soundoff.png"
+    e.src = "./asset/soundoff.png"
     bgAudio.muted = true
   }else if(e.src.endsWith('soundoff.png')){
-    e.src = "/Games/KO/asset/soundon.png"
+    e.src = "./asset/soundon.png"
     bgAudio.muted = false
   }
 }
