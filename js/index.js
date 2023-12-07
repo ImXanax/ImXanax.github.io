@@ -35,9 +35,17 @@ const pageObserver = new IntersectionObserver(
         if (currentPage > 1) {
           document.querySelector(".name").classList.remove("name-display");
           document.querySelector(".name").classList.add("name-hide");
+
+          document.querySelector(".decal-btns").classList.remove("show-decal-btns");
+          document.querySelector(".decal-btns").classList.add("hide-decal-btns");
+
+          
         } else {
           document.querySelector(".name").classList.remove("name-hide");
           document.querySelector(".name").classList.add("name-display");
+
+          document.querySelector(".decal-btns").classList.remove("hide-decal-btns");
+          document.querySelector(".decal-btns").classList.add("show-decal-btns");
         }
 
         document.querySelector(".page").textContent = `${currentPage}/4`;

@@ -234,6 +234,27 @@ li {
   position: absolute;
   top: 50%;
 }
+.decal-btns {
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 5%;
+  top: 88%;
+}
+
+.hide-decal-btns {
+  animation: hide-decal 400ms forwards;
+}
+.show-decal-btns {
+  animation: show-decal 5s alternate;
+}
+
+.decal-btns > a > img {
+  width: 50px;
+  height: 50px;
+  filter: grayscale();
+}
 
 .name-hide {
   animation: name-hide 400ms forwards;
@@ -428,7 +449,7 @@ section {
 }
 
 /* LOADING */
-.loader-container{
+.loader-container {
   width: 100%;
   height: 100%;
   backdrop-filter: blur(5px);
@@ -502,6 +523,26 @@ section {
   100% {
     opacity: 1;
     color: rgb(255, 255, 255);
+  }
+}
+@keyframes hide-decal {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    top: 90%;
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes show-decal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+
+    opacity: 1;
+    display: flex;
   }
 }
 @keyframes blink1 {
