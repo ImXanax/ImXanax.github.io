@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon-CgUOa7be.ico?" />
+
+    <title>BREAKOUT</title>
+    <script type="module" crossorigin src="/assets/bo-vKs6Ng0B.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-B5Qt9EMX.js">
+    <link rel="stylesheet" crossorigin href="/assets/bo-BO9Y41Sx.css">
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="container"></div>
+      <div class="guide-popup">
+        <button class="close" onclick="closePopup()">X</button>
+        <h2 class="guide-title">CONTROLS</h2>
+        <span class="guide-controls">
+          LEFT ARROW KEY ➡ <span id="guide-controls-color">LEFT</span> RIGHT
+          ARROW KEY ➡ <span id="guide-controls-color">RIGHT</span>
+        </span>
+      </div>
+      <div class="score-section">SCORE: <span class="score">0</span></div>
+      <div class="border"></div>
+      <div class="direction-btn">
+        <button id="left" onclick="moveLeft()">⬅</button>
+        <button id="right" onclick="moveRight()">➡</button>
+      </div>
+      <br />
+      <div class="start-btn">
+        <button id="start" onclick="start(); this.onclick=null;">START</button>
+      </div>
+      <div id="refresh"></div>
+    </div>
+  </body>
+</html>
