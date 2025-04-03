@@ -26,7 +26,7 @@ const pageObserver = new IntersectionObserver(
         const boxes = document.querySelectorAll(".box");
 
         for (let i = 0; i < boxes.length; i++) {
-          if (currentPage - 1 == i) {
+          if (currentPage - 1 === i) {
             boxes[i].style.backgroundColor = "#693cdb";
           } else {
             boxes[i].style.backgroundColor = "#e6e6e9";
@@ -39,7 +39,7 @@ const pageObserver = new IntersectionObserver(
           document.querySelector(".decal-btns").classList.remove("show-decal-btns");
           document.querySelector(".decal-btns").classList.add("hide-decal-btns");
 
-          
+
         } else {
           document.querySelector(".name").classList.remove("name-hide");
           document.querySelector(".name").classList.add("name-display");
@@ -60,32 +60,32 @@ sectionEl.forEach((el) => {
 });
 
 const logo = document.querySelector(".logo");
-logo.addEventListener("mouseenter", (l) => {
+logo.addEventListener("mouseenter", () => {
   logo.textContent = ">|<";
   logo.classList.remove("logoexit");
   logo.classList.add("logoenter");
 });
-logo.addEventListener("mouseleave", (l) => {
+logo.addEventListener("mouseleave", () => {
   logo.textContent = "-l||l-";
   logo.classList.remove("logoenter");
   logo.classList.add("logoexit");
 });
 
 (() => {
-  var word;
-  var orignal;
-  var text = "";
+  let word;
+  let original;
+  let text = "";
   const rotationGap = 4;
-  var clock2;
-  var j;
-  var l;
-  var c;
-  var p;
+  let clock2;
+  let j;
+  let l;
+  let c;
+  let p;
 
   window.addEventListener("load", () => {
     word = document.querySelector(".name");
-    orignal = `MERAJ HOSSAINI`;
-    l = orignal.length;
+    original = `MERAJ HOSSAINI`;
+    l = original.length;
     j = c = p = 0;
     clock2 = setInterval(shuffle, 50);
   });
@@ -93,8 +93,8 @@ logo.addEventListener("mouseleave", (l) => {
   function shuffle() {
     if (p-- > 0) return;
     text = "";
-    for (var k = 0; k < j; k++) text += orignal[k];
-    for (var k = j; k < j + 4 && k < l; k++) {
+    for (let k = 0; k < j; k++) text += original[k];
+    for (let b = j; b < j + 4 && b < l; b++) {
       text += String.fromCharCode(
         Math.random() > 0.5
           ? Math.floor(Math.random() * 26) + 65
@@ -102,7 +102,7 @@ logo.addEventListener("mouseleave", (l) => {
       );
     }
     c++;
-    if (c == rotationGap) {
+    if (c === rotationGap) {
       c = 0;
       j += 1;
     }
@@ -113,12 +113,13 @@ logo.addEventListener("mouseleave", (l) => {
       p = 100;
     }
   }
+
 })();
 
 const hamburger = () => {
   const dropDownMenu = document.querySelector(".nav-dropdown");
   if (dropDownMenu) {
-    if (dropDownMenu.style.display == "flex") {
+    if (dropDownMenu.style.display === "flex") {
       dropDownMenu.style.display = "none";
     } else {
       dropDownMenu.style.display = "flex";
@@ -127,7 +128,7 @@ const hamburger = () => {
 };
 
 function findOverFlowAxisY() {
-  var all = document.getElementsByTagName("*"),
+  let all = document.getElementsByTagName("*"),
     i = 0,
     rect,
     docWidth = document.documentElement.offsetWidth;

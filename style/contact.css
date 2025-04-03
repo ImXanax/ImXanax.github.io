@@ -14,7 +14,6 @@
   align-items: center;
   flex-flow: row wrap;
   flex-basis: 33.333333%;
-  gap: 20px;
   width: 80vw;
   height: 80vh;
   max-width: 100%;
@@ -35,7 +34,7 @@
   border-bottom: 2px solid white;
 }
 .ctc-icon {
-  width: 3vw;
+  width: 30px;
   height: 100%;
   margin-left: 10px;
   display: flex;

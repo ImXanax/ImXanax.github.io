@@ -1,3 +1,3 @@
 - trembling page counter on mobile aspect ratio
-- issue with disturbute function on resize
+- issue with distribute function on resize
 - add packages used in projects like the github icon
