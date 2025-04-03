@@ -38,7 +38,7 @@ import {GLTFLoader} from "three/addons";
     mainContainer.appendChild(renderer.domElement);
 
     let model;
-    loader.load("/images/soulless/scene.gltf", (gltf) => {
+    loader.load("model/scene.gltf", (gltf) => {
             model = gltf.scene;
             model.position.z = -100;
             scene.add(model);

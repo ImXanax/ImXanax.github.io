@@ -16,7 +16,7 @@ function main() {
     const storedTodos = JSON.parse(localStorage.getItem("todo"));
     console.log("✔ storedTodo: ",storedTodos)
     if (storedTodos && storedTodos.length) {
-        todos.push(storedTodos)
+        todos.push(...storedTodos)
         renderTodos();
     } else localStorage.setItem("todo", JSON.stringify(todos));
 
