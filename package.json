@@ -1,12 +1,12 @@
 {
   "name": "website",
   "version": "1.0.0",
-  "homepage": "https://ImXanax.github.io/ImXanax.github.io",
+  "homepage": "https://ImXanax.github.io",
   "description": "Profolio [Website](https://imxanax.github.io/) highlighting skills and projects i work on also includes coding experiments and game development.",
   "main": "index.js",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build"
   },
