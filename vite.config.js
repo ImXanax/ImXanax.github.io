@@ -14,6 +14,7 @@ export default defineConfig({
                 pt: resolve(__dirname, 'view/Games/PT/pt.html'),
                 rpc: resolve(__dirname, 'view/Games/RPC/rpc.html'),
                 wm: resolve(__dirname, 'view/Games/WM/wm.html'),
+                gr: resolve(__dirname, 'view/Xantil/GR/gr.html'),
             }
         }
     },

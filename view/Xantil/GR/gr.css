@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'fff';
+    src: url('/fonts/fff.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #1e1e2f;
+    color: #fff;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.form-side {
+    width: 50%;
+    padding: 2rem;
+    background: #13132a;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    font-family: "fff";
+}
+
+input, button {
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+    margin-top: 0.3rem;
+    font-family: "fff";
+}
+
+button {
+    background-color: #53957d;
+    color: white;
+    cursor: pointer;
+}
+
+.canvas-side {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0b0b12;
+}
+
+canvas {
+    border: 2px solid #555;
+    max-width: 100%;
+    height: auto;
+}
