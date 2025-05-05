@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>TABS</title>
+  <link rel="stylesheet" crossorigin href="/assets/gr-C_NP2_LV.css">
+</head>
+<body>
+<div class="container">
+    <div class="form-side">
+        <span style="font-family: 'fff'; font-size: 24px;">
+            &lt;I|I&gt;
+        </span>
+        <form id="cardForm">
+            <label>-=: <input type="text" name="title" required></label>
+            <label>-== <input type="text" name="artist" required></label>
+            <label>BP <input type="number" name="bp"></label>
+            <label>CP <input type="number" name="cp"></label>
+            <label>NRIS<input type="text" name="nris" placeholder="X,X,X,X,X,X"></label>
+            <button type="submit">GENERATE</button>
+            <button id="downloadBtn" type="button">DOWNLOAD</button>
+        </form>
+    </div>
+    <div class="canvas-side">
+        <canvas id="cardCanvas" width="1080" height="1080"></canvas>
+    </div>
+</div>
+<script src="gr.js"></script>
+</body>
+
+</html>
